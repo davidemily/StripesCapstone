@@ -34,13 +34,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="2128" />
+          <entry key="cs" value="2136" />
           <entry key="json" value="91" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="2128" />
+          <entry key="C#" value="2136" />
           <entry key="JSON" value="91" />
         </counts>
       </usages-collector>
@@ -53,24 +53,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataAccess/DBConnector.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="86" column="67" lean-forward="true" selection-start-line="86" selection-start-column="67" selection-end-line="86" selection-end-column="67" />
+            <state relative-caret-position="411">
+              <caret line="82" column="139" selection-start-line="82" selection-start-column="139" selection-end-line="82" selection-end-column="139" />
               <folding>
-                <marker date="1540160211840" expanded="false" signature="6:150" ph="..." />
-                <marker date="1540160211840" expanded="true" signature="176:3231" ph="{...}" />
-                <marker date="1540160211840" expanded="true" signature="207:3229" ph="{...}" />
-                <marker date="1540160211840" expanded="true" signature="436:482" ph="{...}" />
-                <marker date="1540160211840" expanded="true" signature="547:977" ph="{...}" />
-                <marker date="1540160211840" expanded="true" signature="1054:1274" ph="{...}" />
-                <marker date="1540160211840" expanded="true" signature="1081:1173" ph="{...}" />
-                <marker date="1540160211840" expanded="true" signature="1206:1264" ph="{...}" />
-                <marker date="1540160211840" expanded="true" signature="1341:1614" ph="{...}" />
-                <marker date="1540160211840" expanded="true" signature="1368:1461" ph="{...}" />
-                <marker date="1540160211840" expanded="true" signature="1499:1604" ph="{...}" />
-                <marker date="1540160211840" expanded="true" signature="1695:3222" ph="{...}" />
-                <marker date="1540160211840" expanded="true" signature="1739:3212" ph="{...}" />
-                <marker date="1540160211840" expanded="true" signature="1818:2445" ph="/* comm.Parameters.Add(&quot;@person&quot;, request.PatronName.ToString()); ... */" />
-                <marker date="1540160211840" expanded="true" signature="2993:3163" ph="{...}" />
+                <marker date="1540160390818" expanded="false" signature="6:150" ph="..." />
+                <marker date="1540160390818" expanded="true" signature="176:3239" ph="{...}" />
+                <marker date="1540160390818" expanded="true" signature="207:3237" ph="{...}" />
+                <marker date="1540160390818" expanded="true" signature="436:482" ph="{...}" />
+                <marker date="1540160390818" expanded="true" signature="547:977" ph="{...}" />
+                <marker date="1540160390818" expanded="true" signature="1054:1274" ph="{...}" />
+                <marker date="1540160390818" expanded="true" signature="1081:1173" ph="{...}" />
+                <marker date="1540160390818" expanded="true" signature="1206:1264" ph="{...}" />
+                <marker date="1540160390818" expanded="true" signature="1341:1614" ph="{...}" />
+                <marker date="1540160390818" expanded="true" signature="1368:1461" ph="{...}" />
+                <marker date="1540160390818" expanded="true" signature="1499:1604" ph="{...}" />
+                <marker date="1540160390818" expanded="true" signature="1695:3230" ph="{...}" />
+                <marker date="1540160390818" expanded="true" signature="1739:3220" ph="{...}" />
+                <marker date="1540160390818" expanded="true" signature="1818:2445" ph="/* comm.Parameters.Add(&quot;@person&quot;, request.PatronName.ToString()); ... */" />
+                <marker date="1540160390818" expanded="true" signature="3001:3171" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -344,12 +344,12 @@
       <option name="presentableId" value="Default" />
       <updated>1538961949046</updated>
       <workItem from="1538961952414" duration="1708000" />
-      <workItem from="1540150192914" duration="8801000" />
+      <workItem from="1540150192914" duration="8980000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10509000" />
+    <option name="totallyTimeSpent" value="10688000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -537,24 +537,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataAccess/DBConnector.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="86" column="67" lean-forward="true" selection-start-line="86" selection-start-column="67" selection-end-line="86" selection-end-column="67" />
+        <state relative-caret-position="411">
+          <caret line="82" column="139" selection-start-line="82" selection-start-column="139" selection-end-line="82" selection-end-column="139" />
           <folding>
-            <marker date="1540160211840" expanded="false" signature="6:150" ph="..." />
-            <marker date="1540160211840" expanded="true" signature="176:3231" ph="{...}" />
-            <marker date="1540160211840" expanded="true" signature="207:3229" ph="{...}" />
-            <marker date="1540160211840" expanded="true" signature="436:482" ph="{...}" />
-            <marker date="1540160211840" expanded="true" signature="547:977" ph="{...}" />
-            <marker date="1540160211840" expanded="true" signature="1054:1274" ph="{...}" />
-            <marker date="1540160211840" expanded="true" signature="1081:1173" ph="{...}" />
-            <marker date="1540160211840" expanded="true" signature="1206:1264" ph="{...}" />
-            <marker date="1540160211840" expanded="true" signature="1341:1614" ph="{...}" />
-            <marker date="1540160211840" expanded="true" signature="1368:1461" ph="{...}" />
-            <marker date="1540160211840" expanded="true" signature="1499:1604" ph="{...}" />
-            <marker date="1540160211840" expanded="true" signature="1695:3222" ph="{...}" />
-            <marker date="1540160211840" expanded="true" signature="1739:3212" ph="{...}" />
-            <marker date="1540160211840" expanded="true" signature="1818:2445" ph="/* comm.Parameters.Add(&quot;@person&quot;, request.PatronName.ToString()); ... */" />
-            <marker date="1540160211840" expanded="true" signature="2993:3163" ph="{...}" />
+            <marker date="1540160390818" expanded="false" signature="6:150" ph="..." />
+            <marker date="1540160390818" expanded="true" signature="176:3239" ph="{...}" />
+            <marker date="1540160390818" expanded="true" signature="207:3237" ph="{...}" />
+            <marker date="1540160390818" expanded="true" signature="436:482" ph="{...}" />
+            <marker date="1540160390818" expanded="true" signature="547:977" ph="{...}" />
+            <marker date="1540160390818" expanded="true" signature="1054:1274" ph="{...}" />
+            <marker date="1540160390818" expanded="true" signature="1081:1173" ph="{...}" />
+            <marker date="1540160390818" expanded="true" signature="1206:1264" ph="{...}" />
+            <marker date="1540160390818" expanded="true" signature="1341:1614" ph="{...}" />
+            <marker date="1540160390818" expanded="true" signature="1368:1461" ph="{...}" />
+            <marker date="1540160390818" expanded="true" signature="1499:1604" ph="{...}" />
+            <marker date="1540160390818" expanded="true" signature="1695:3230" ph="{...}" />
+            <marker date="1540160390818" expanded="true" signature="1739:3220" ph="{...}" />
+            <marker date="1540160390818" expanded="true" signature="1818:2445" ph="/* comm.Parameters.Add(&quot;@person&quot;, request.PatronName.ToString()); ... */" />
+            <marker date="1540160390818" expanded="true" signature="3001:3171" ph="{...}" />
           </folding>
         </state>
       </provider>
