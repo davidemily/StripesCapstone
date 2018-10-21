@@ -45,6 +45,14 @@
         "SwashBuckle.AspNetCore.MicrosoftExtensions": {
           "target": "Package",
           "version": "[0.4.0, )"
+        },
+        "Swashbuckle.AspNetCore.SwaggerGen": {
+          "target": "Package",
+          "version": "[3.0.0, )"
+        },
+        "Swashbuckle.AspNetCore.SwaggerUI": {
+          "target": "Package",
+          "version": "[3.0.0, )"
         }
       },
       "imports": [
