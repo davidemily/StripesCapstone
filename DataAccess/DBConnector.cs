@@ -76,6 +76,10 @@ namespace API.DataAccess
                 comm.Parameters.Add("@dropoff", request.Destination);
                 comm.CommandText = "INSERT INTO RIDES (RideId, PatronName, PhoneNumber, NumberOfPeople, Pickup, Destination, Status, TimeRequested, RequestSource,NIGHTS_NightId) VALUES " +
                                    "(1, @name, @phone, '1', @pickup, @dropoff, 'waiting', NOW(), 'iphone', 1);";
+                if (comm.ExecuteNonQuery() != 1)
+                {
+                    throw new Exception("did not modify database");
+                }
                 CloseConnection();
             }
         }
