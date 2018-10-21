@@ -70,79 +70,18 @@ namespace API.DataAccess
             if (OpenConnection())
             {
                 MySqlCommand comm = connection.CreateCommand();
-                comm.Parameters.Add("@person", request.PatronName);
-                comm.Parameters.Add("@phone", request.PhoneNumber);
-                comm.Parameters.Add("@pickup", request.Pickup);
-                comm.Parameters.Add("@dropoff", request.Destination);
+                comm.Parameters.Add("@person", request.PatronName.ToString());
+                comm.Parameters.Add("@phone", request.PhoneNumber.ToString());
+                comm.Parameters.Add("@pickup", request.Pickup.ToString());
+                comm.Parameters.Add("@dropoff", request.Destination.ToString());
                 comm.CommandText = "INSERT INTO RIDES (RideId, PatronName, PhoneNumber, NumberOfPeople, Pickup, Destination, Status, TimeRequested, RequestSource,NIGHTS_NightId) VALUES " +
                                    "(1, @name, @phone, '1', @pickup, @dropoff, 'waiting', NOW(), 'iphone', 1);";
                 if (comm.ExecuteNonQuery() != 1)
                 {
+                    Console.WriteLine("did not modify database");
                     throw new Exception("did not modify database");
                 }
                 CloseConnection();
-            }
-        }
-
-        // Update statement 
-        public void Update()
-        {
-            string query = "UPDATE tableinfo SET name='Joe', age='22' WHERE name='John Smith'";
-
-            if (this.OpenConnection() == true) 
-            {
-                // open connection
-                MySqlCommand cmd = new MySqlCommand();
-                // assign the query using CommandText
-                cmd.CommandText = query;
-                // assign the connection using Connection
-                cmd.Connection = connection;
-                // execute the query
-                cmd.ExecuteNonQuery();
-
-                // close connection
-                this.CloseConnection();
-            }
-        }
-
-        public List<string>[] Select()
-        {
-            string query = "SELECT * FROM CARS";
-
-            // Creating a list to store the result
-            List<string>[] list = new List<string>[4];
-            list[0] = new List<string>();
-            list[1] = new List<string>();
-            list[2] = new List<string>();
-            list[3] = new List<string>();
-
-            // open connection
-            if (this.OpenConnection() == true) 
-            {
-                // create command
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                // create a data reader and execute the command
-                MySqlDataReader dataReader = cmd.ExecuteReader();
-
-                // read the data and store them in the list
-                while (dataReader.Read())
-                {
-                    list[0].Add(dataReader["CarId"] + "");
-                    list[1].Add(dataReader["CarNumber"] + "");
-                    list[2].Add(dataReader["PhoneNumber"] + "");
-                    list[3].Add(dataReader["IsActive"] + "");
-                }
-
-                // close data reader
-                dataReader.Close();
-                // close connection
-                this.CloseConnection();
-                // return list
-                return list;            
-            }
-            else 
-            {
-                return list;
             }
         }
 
