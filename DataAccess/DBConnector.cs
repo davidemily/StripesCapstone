@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using API.Models;
 using MySql.Data.MySqlClient;
 
 namespace API.DataAccess
@@ -25,7 +26,7 @@ namespace API.DataAccess
         private void Initialize() 
         {
             server = "localhost";
-	    uid = "stripessql";
+	        uid = "stripessql";
             database = "stripes";
             password = "stripessqldatabase";
             string connectionString;
@@ -42,22 +43,8 @@ namespace API.DataAccess
                 connection.Open();
                 return true;
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine(ex);
-                // When handling errors, we can show the application's response based on the error number.
-                // The two most common error numbers when connecting are as follows:
-                // 0: Cannot connect to server.
-                // 1045: Invalid username and/or password.
-                switch (ex.Number)
-                {
-                    case 0: 
-                        Console.WriteLine("Cannot connect to server.");
-                        break;
-                    case 1045:
-                        Console.WriteLine("Invalid username/password");
-                        break;
-                }
                 return false;
             }
         }
@@ -78,20 +65,11 @@ namespace API.DataAccess
         }
 
         //Insert statement
-        public void InsertRide() 
+        public void InsertRide(RideRequest request) 
         {
-            string query = "INSERT INTO tableinfo (name, age) VALUES('John Smith', '33')";
-
-            // open connection
-            if (this.OpenConnection() == true) 
+            if (OpenConnection())
             {
-                // create command and assign the query and connection from the constructor
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                // execute command
-                cmd.ExecuteNonQuery();
-
-                //close connection
-                this.CloseConnection();
+                
             }
         }
 

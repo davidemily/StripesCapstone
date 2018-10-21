@@ -28,7 +28,6 @@ namespace API.Controllers
             return "value";
         }
 
-        // POST api/values
         [HttpPost]
         public ActionResult Post([FromBody] RideRequest request)
         {
@@ -37,6 +36,15 @@ namespace API.Controllers
                 return BadRequest();
             }
 
+            try
+            {
+                DBConnector db = new DBConnector();
+                db.InsertRide(request);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500);
+            }
             return Ok();
 
         }

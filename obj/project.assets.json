@@ -2893,6 +2893,51 @@
           }
         }
       },
+      "SwashBuckle.AspNetCore.MicrosoftExtensions/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.WebUtilities": "1.1.2",
+          "NETStandard.Library": "1.6.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "1.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.6/SwashBuckle.AspNetCore.MicrosoftExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/SwashBuckle.AspNetCore.MicrosoftExtensions.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.6/Swashbuckle.AspNetCore.Swagger.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/Swashbuckle.AspNetCore.Swagger.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ApiExplorer": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.DataAnnotations": "1.0.0",
+          "NETStandard.Library": "1.6.1",
+          "Swashbuckle.AspNetCore.Swagger": "1.0.0",
+          "System.Xml.XPath": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4362,7 +4407,7 @@
           "System.Xml.ReaderWriter": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Xml.XPath.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.dll": {}
@@ -7283,6 +7328,44 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "SwashBuckle.AspNetCore.MicrosoftExtensions/0.4.0": {
+      "sha512": "9yb0V3GCldP9h6NBoznksiMP/b5zzWKBBbqKgPi+1lGmPaytTtpJfjPIFfFa5MbkLoB5rUv2OSeFsXYt5iQXKA==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.microsoftextensions/0.4.0",
+      "files": [
+        "lib/netstandard1.6/SwashBuckle.AspNetCore.MicrosoftExtensions.dll",
+        "swashbuckle.aspnetcore.microsoftextensions.0.4.0.nupkg.sha512",
+        "swashbuckle.aspnetcore.microsoftextensions.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.Swagger/1.0.0": {
+      "sha512": "vL/X/HH4ddfYV7ZjZU+fAPTNPF1FPCKfrmrm/kClEzs7pRrUx8jd6LX+XeYxoToRGO/azuZemWrznL1sFiiF/g==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swagger/1.0.0",
+      "files": [
+        ".signature.p7s",
+        "lib/net451/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/net451/Swashbuckle.AspNetCore.Swagger.xml",
+        "lib/netstandard1.6/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/netstandard1.6/Swashbuckle.AspNetCore.Swagger.xml",
+        "swashbuckle.aspnetcore.swagger.1.0.0.nupkg.sha512",
+        "swashbuckle.aspnetcore.swagger.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/1.0.0": {
+      "sha512": "8UsSaR950i4arCFk5QaWvhd+FSH27BpGcoOMTfcx0Z/FROe5QE0MNtgtgp0MFxkJQiFlP9YXGVM5I5/xMmPzxw==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swaggergen/1.0.0",
+      "files": [
+        ".signature.p7s",
+        "lib/net451/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/net451/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "swashbuckle.aspnetcore.swaggergen.1.0.0.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggergen.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -11641,7 +11724,8 @@
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
-      "MySql.Data >= 8.0.12"
+      "MySql.Data >= 8.0.12",
+      "SwashBuckle.AspNetCore.MicrosoftExtensions >= 0.4.0"
     ]
   },
   "packageFolders": {
@@ -11698,6 +11782,10 @@
           "MySql.Data": {
             "target": "Package",
             "version": "[8.0.12, )"
+          },
+          "SwashBuckle.AspNetCore.MicrosoftExtensions": {
+            "target": "Package",
+            "version": "[0.4.0, )"
           }
         },
         "imports": [
