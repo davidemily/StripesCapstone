@@ -80,7 +80,7 @@ namespace API.DataAccess
                     "INSERT INTO RIDES (RideId, PatronName, PhoneNumber, NumberOfPeople, Pickup, Destination, Status, TimeRequested, RequestSource,NIGHTS_NightId)" +
                     " VALUES " +
                     //"(1, 'Test', '5555555', '1', 'Test', 'test', 'waiting', NOW(), 'iphone', 1)";
-                    $"({int.Parse(Guid.NewGuid().ToString())}, {request.PatronName}, {request.PhoneNumber}, '1', {request.Pickup}, {request.Destination}, 'waiting', NOW(), 'iphone', 1)";
+                    $"({request.RideId}, {request.PatronName}, {request.PhoneNumber}, '1', {request.Pickup}, {request.Destination}, 'waiting', NOW(), 'iphone', 1)";
                 if (comm.ExecuteNonQuery() != 1)
                 {
                     Console.WriteLine("did not modify database");
