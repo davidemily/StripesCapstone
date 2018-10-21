@@ -1,0 +1,14 @@
+/var/www/html/API/bin/Release/netcoreapp2.1/API.deps.json
+/var/www/html/API/bin/Release/netcoreapp2.1/API.runtimeconfig.json
+/var/www/html/API/bin/Release/netcoreapp2.1/API.runtimeconfig.dev.json
+/var/www/html/API/bin/Release/netcoreapp2.1/API.dll
+/var/www/html/API/bin/Release/netcoreapp2.1/API.pdb
+/var/www/html/API/obj/Release/netcoreapp2.1/API.csprojAssemblyReference.cache
+/var/www/html/API/obj/Release/netcoreapp2.1/API.csproj.CoreCompileInputs.cache
+/var/www/html/API/obj/Release/netcoreapp2.1/API.RazorAssemblyInfo.cache
+/var/www/html/API/obj/Release/netcoreapp2.1/API.RazorAssemblyInfo.cs
+/var/www/html/API/obj/Release/netcoreapp2.1/API.AssemblyInfoInputs.cache
+/var/www/html/API/obj/Release/netcoreapp2.1/API.AssemblyInfo.cs
+/var/www/html/API/obj/Release/netcoreapp2.1/API.RazorTargetAssemblyInfo.cache
+/var/www/html/API/obj/Release/netcoreapp2.1/API.dll
+/var/www/html/API/obj/Release/netcoreapp2.1/API.pdb
