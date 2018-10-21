@@ -69,7 +69,14 @@ namespace API.DataAccess
         {
             if (OpenConnection())
             {
-                
+                MySqlCommand comm = connection.CreateCommand();
+                comm.Parameters.Add("@person", request.PatronName);
+                comm.Parameters.Add("@phone", request.PhoneNumber);
+                comm.Parameters.Add("@pickup", request.Pickup);
+                comm.Parameters.Add("@dropoff", request.Destination);
+                comm.CommandText = "INSERT INTO RIDES (RideId, PatronName, PhoneNumber, NumberOfPeople, Pickup, Destination, Status, TimeRequested, RequestSource,NIGHTS_NightId) VALUES " +
+                                   "(1, @name, @phone, '1', @pickup, @dropoff, 'waiting', NOW(), 'iphone', 1);";
+                CloseConnection();
             }
         }
 
