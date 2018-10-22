@@ -90,5 +90,45 @@ namespace API.DataAccess
             }
         }
 
+        
+        public List<string> getNightStatus() 
+        {
+            // creating a list to store the result
+            List<string> list = new List<string>(); 
+
+            string query = "select * from NIGHTS where Night='2018-10-21'";
+            // get the current date and query the database to see if the night is currently active
+            // however for testing purposes going to be using a static entry in the database...
+
+            if (OpenConnection())
+            {
+                // MySqlCommand comm = connection.CreateCommand();
+                // comm.CommandText = query;
+
+                // create the command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                // create a data reader and execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                // read the data and store them in the list
+                while(dataReader.Read())
+                {
+                    list.Add(dataReader["NightId"] + "");
+                    list.Add(dataReader["Night"] + "");
+                    list.Add(dataReader["IsActive"] + "");
+                }
+
+                // close the data reader
+                dataReader.Close();
+                //close the connection
+                CloseConnection();
+                // return the list
+                return list;
+            }
+            else 
+            {
+                return list;
+            }
+        }
     }
 }
