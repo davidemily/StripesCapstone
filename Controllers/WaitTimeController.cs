@@ -21,7 +21,6 @@ namespace API.Controllers
             // need to calculate 
             WaitTime result = new WaitTime
             {
-                status = "notRunning",
                 waitTime = 105
             };
             
