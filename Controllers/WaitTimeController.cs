@@ -31,11 +31,10 @@ namespace API.Controllers
                 try 
                 {
                     List<string> queryResult = dbConnection.getNightStatus();
-                    console.WriteLine(queryResult[2]);
-                    if(queryResult[2].Equals("1"))
-                    {
-                        result.status = "running";
-                    }
+                    // if(queryResult[2].Equals("1"))
+                    // {
+                        result.status = queryResult[2];
+                    // }
                 }
                 catch (Exception ex)
                 {
