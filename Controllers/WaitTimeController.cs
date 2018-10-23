@@ -15,7 +15,7 @@ namespace API.Controllers
     public class WaitTimeController : ControllerBase
     {
         [HttpGet]
-        public async Task<List<string>[]> Get()
+        public async Task<List<string>> Get()
         {
             // ex for waitTime: 105 = 1 hour 45 min
             // need to calculate 
@@ -23,10 +23,9 @@ namespace API.Controllers
             {
                 waitTime = 105
             };
-            List<string>[] queryResult = new List<string>[3];
+            List<string> queryResult = new List<string>;
             DBConnector dbConnection = new DBConnector();
             queryResult = dbConnection.getNightStatus();
-            Console.WriteLine("I AM HERE!");
             if (dbConnection.OpenConnection())
             {
                 try 

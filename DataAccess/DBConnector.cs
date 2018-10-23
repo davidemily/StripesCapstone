@@ -91,13 +91,10 @@ namespace API.DataAccess
         }
 
         
-        public List<string>[] getNightStatus() 
+        public List<string> getNightStatus() 
         {
             // creating a list to store the result
-            List<string>[] list = new List<string>[3];
-            list[0] = new List<string>();
-            list[1] = new List<string>();
-            list[2] = new List<string>();
+            List<string> list = new List<string>();
 
             string query = "Select * from NIGHTS where Night='2018-10-21'";
             // get the current date and query the database to see if the night is currently active
@@ -117,9 +114,9 @@ namespace API.DataAccess
                     // read the data and store them in the list
                     while(dataReader.Read())
                     {
-                        list[0].Add(dataReader["NightId"] + "");
-                        list[1].Add(dataReader["Night"] + "");
-                        list[2].Add(dataReader["IsActive"] + "");
+                        list.Add(dataReader["NightId"] + "");
+                        list.Add(dataReader["Night"] + "");
+                        list.Add(dataReader["IsActive"] + "");
                     }
                     // close the data reader
                     dataReader.Close();
@@ -136,9 +133,6 @@ namespace API.DataAccess
             }
             else 
             {
-                list[0].Add("BITCONNECT");
-                list[1].Add("BITCONNECT");
-                list[2].Add("BITCONNECT");
                 return list;
             }
         }
