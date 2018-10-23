@@ -46,12 +46,12 @@ namespace API.Controllers
                     }
                     else 
                     {
-                        return = "notRunning";
+                        return "notRunning";
                     }
                 }
                 catch (Exception ex)
                 {
-                    return = ex.ToString();
+                    return ex.ToString();
                     // return StatusCode(500);
                 }
             }
