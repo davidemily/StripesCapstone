@@ -116,9 +116,9 @@ namespace API.DataAccess
                 // read the data and store them in the list
                 while(dataReader.Read())
                 {
-                    list[0].Add(dataReader.GetInt32(0) + "");
-                    list[1].Add(dataReader.GetDateTime(1) + "");
-                    list[2].Add(dataReader.GetByte(2) + "");
+                    list[0].Add(dataReader["NightId"] + "");
+                    list[1].Add(dataReader["Night"] + "");
+                    list[2].Add(dataReader["IsActive"] + "");
                 }
 
                 // close the data reader
@@ -130,7 +130,6 @@ namespace API.DataAccess
             }
             else 
             {
-                
                 return list;
             }
         }
