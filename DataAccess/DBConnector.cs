@@ -118,6 +118,10 @@ namespace API.DataAccess
                     list[2].Add(dataReader["IsActive"] + "");
                 }
 
+                Console.WriteLine(list[0]);
+                Console.WriteLine(list[1]);
+                Console.WriteLine(list[2]);
+
                 // close the data reader
                 dataReader.Close();
                 //close the connection
