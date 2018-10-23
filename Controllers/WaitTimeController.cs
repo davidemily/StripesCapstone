@@ -47,7 +47,7 @@ namespace API.Controllers
                 dbConnection.CloseConnection();
             }
 
-            return queryResult;
+            return result;
         }
     }
 }
