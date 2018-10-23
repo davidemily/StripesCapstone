@@ -15,7 +15,7 @@ namespace API.Controllers
     public class WaitTimeController : ControllerBase
     {
         [HttpGet]
-        public async Task<WaitTime> Get()
+        public async Task<List<string>[]> Get()
         {
             // ex for waitTime: 105 = 1 hour 45 min
             // need to calculate 
