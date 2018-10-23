@@ -96,7 +96,7 @@ namespace API.DataAccess
             // creating a list to store the result
             List<string>[] list = new List<string>[3]; 
 
-            string query = "select * from NIGHTS";
+            string query = "select * from NIGHTS where Night='2018-10-21'";
             // get the current date and query the database to see if the night is currently active
             // however for testing purposes going to be using a static entry in the database...
 

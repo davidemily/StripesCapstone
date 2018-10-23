@@ -29,10 +29,11 @@ namespace API.Controllers
             {
                 try 
                 {
-                    List<string>[] queryResult = dbConnection.getNightStatus();
+                    List<string>[] queryResult = new List<string>[3];
+                    queryResult = dbConnection.getNightStatus();
                     if(queryResult[2].Equals("1"))
                     {
-                        result.status = "running";
+                        result.status = queryResult[1];
                     }
                 }
                 catch (Exception ex)
