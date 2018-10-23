@@ -33,8 +33,8 @@ namespace API.Controllers
                 {
                     List<string> queryResult = new List<string>();
                     queryResult = dbConnection.getNightStatus();
-                    Console.WriteLine(queryResult);
-                    if(queryResult[2].Equals(1))
+                    Console.WriteLine(queryResult[2]);
+                    if(queryResult[2].Equals("1"))
                     {
                         result.status = "running";
                     }
