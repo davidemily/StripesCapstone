@@ -91,50 +91,56 @@ namespace API.DataAccess
         }
 
         
-        // public List<string>[] getNightStatus() 
-        // {
-        //     // creating a list to store the result
-        //     List<string>[] list = new List<string>[3];
-        //     list[0] = new List<string>();
-        //     list[1] = new List<string>();
-        //     list[2] = new List<string>();
+        public List<string>[] getNightStatus() 
+        {
+            // creating a list to store the result
+            List<string>[] list = new List<string>[3];
+            list[0] = new List<string>();
+            list[1] = new List<string>();
+            list[2] = new List<string>();
 
-        //     string query = "Select * from NIGHTS where Night='2018-10-21";
-        //     // get the current date and query the database to see if the night is currently active
-        //     // however for testing purposes going to be using a static entry in the database...
+            string query = "Select * from NIGHTS where Night='2018-10-21";
+            // get the current date and query the database to see if the night is currently active
+            // however for testing purposes going to be using a static entry in the database...
 
-        //     if (OpenConnection())
-        //     {
-        //         // MySqlCommand comm = connection.CreateCommand();
-        //         // comm.CommandText = query;
+            if (OpenConnection())
+            {
+                // MySqlCommand comm = connection.CreateCommand();
+                // comm.CommandText = query;
 
-        //         // create the command
-        //         MySqlCommand cmd = new MySqlCommand(query, connection);
-        //         // create a data reader and execute the command
-        //         MySqlDataReader dataReader = cmd.ExecuteReader();
+                // create the command
+                try {
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    // create a data reader and execute the command
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
 
-        //         // read the data and store them in the list
-        //         while(dataReader.Read())
-        //         {
-        //             list[0].Add(dataReader["NightId"] + "");
-        //             list[1].Add(dataReader["Night"] + "");
-        //             list[2].Add(dataReader["IsActive"] + "");
-        //         }
-
-        //         // close the data reader
-        //         dataReader.Close();
-        //         //close the connection
-        //         CloseConnection();
-        //         // return the list
-        //         return list;
-        //     }
-        //     else 
-        //     {
-        //         list[0].Add("BITCONNECT");
-        //         list[1].Add("BITCONNECT");
-        //         list[2].Add("BITCONNECT");
-        //         return list;
-        //     }
-        // }
+                    // read the data and store them in the list
+                    while(dataReader.Read())
+                    {
+                        list[0].Add(dataReader["NightId"] + "");
+                        list[1].Add(dataReader["Night"] + "");
+                        list[2].Add(dataReader["IsActive"] + "");
+                    }
+                    // close the data reader
+                    dataReader.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+                
+                //close the connection
+                CloseConnection();
+                // return the list
+                return list;
+            }
+            else 
+            {
+                list[0].Add("BITCONNECT");
+                list[1].Add("BITCONNECT");
+                list[2].Add("BITCONNECT");
+                return list;
+            }
+        }
     }
 }
