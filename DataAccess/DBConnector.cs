@@ -127,6 +127,7 @@ namespace API.DataAccess
             }
             else 
             {
+                list[1].Add("BITCONNECT");
                 return list;
             }
         }
