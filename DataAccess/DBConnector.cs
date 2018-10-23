@@ -94,7 +94,10 @@ namespace API.DataAccess
         public List<string>[] getNightStatus() 
         {
             // creating a list to store the result
-            List<string>[] list = new List<string>[3]; 
+            List<string>[] list = new List<string>[3];
+            list[0] = new List<string>();
+            list[1] = new List<string>();
+            list[2] = new List<string>();
 
             string query = "SELECT * FROM NIGHTS WHERE Night='2018-10-21'";
             // get the current date and query the database to see if the night is currently active
@@ -127,7 +130,7 @@ namespace API.DataAccess
             }
             else 
             {
-                list[1].Add("BITCONNECT");
+                
                 return list;
             }
         }
