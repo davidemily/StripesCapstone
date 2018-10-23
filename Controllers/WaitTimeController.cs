@@ -15,27 +15,29 @@ namespace API.Controllers
     public class WaitTimeController : ControllerBase
     {
         [HttpGet]
-        public async Task<List<string>> Get()
+        public async Task<WaitTime> Get()
         {
             // ex for waitTime: 105 = 1 hour 45 min
             // need to calculate 
             WaitTime result = new WaitTime
             {
+                status = "notRunning",
                 waitTime = 105
             };
-            List<string> queryResult = new List<string>();
+            
             DBConnector dbConnection = new DBConnector();
-            queryResult = dbConnection.getNightStatus();
+            
             if (dbConnection.OpenConnection())
             {
                 try 
                 {
-                    
-                    // Console.WriteLine(queryResult);
-                    // if(queryResult[2].Equals(1))
-                    // {
-                        result.status = queryResult[0].ToString();
-                    // }
+                    List<string> queryResult = new List<string>();
+                    queryResult = dbConnection.getNightStatus();
+                    Console.WriteLine(queryResult);
+                    if(queryResult[2].Equals(1))
+                    {
+                        result.status = "running";
+                    }
                 }
                 catch (Exception ex)
                 {
