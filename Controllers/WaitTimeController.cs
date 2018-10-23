@@ -42,7 +42,7 @@ namespace API.Controllers
                     List<string> queryResult = dbConnection.getNightStatus();
                     foreach(var i in queryResult)
                     {
-                        temp += i + " ";
+                        temp += i + " MEMES";
                         Console.WriteLine(i);
                     }
                     // Console.WriteLine(queryResult);
