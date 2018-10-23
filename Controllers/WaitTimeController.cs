@@ -38,7 +38,7 @@ namespace API.Controllers
                 try 
                 {
                     List<string> queryResult = new List<string>();
-                    queryResult = dbConnection.getNightStatus();
+                    queryResult = dbConnection.getNightStatus().Select(p => p.ToString()).ToList();
                     Console.WriteLine(queryResult);
                     // if(queryResult[2].Equals("1"))
                     // {
