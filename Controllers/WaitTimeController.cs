@@ -55,6 +55,10 @@ namespace API.Controllers
                     // return StatusCode(500);
                 }
             }
+            else 
+            {
+                return "";
+            }
         }
 
         public int getTime()
