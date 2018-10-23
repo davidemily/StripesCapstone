@@ -26,7 +26,7 @@ namespace API.Controllers
             List<string> queryResult = new List<string>();
             DBConnector dbConnection = new DBConnector();
             queryResult = dbConnection.getNightStatus();
-            console.WriteLine(queryResult[1]);
+            Console.WriteLine(queryResult[1]);
             if (dbConnection.OpenConnection())
             {
                 try 
