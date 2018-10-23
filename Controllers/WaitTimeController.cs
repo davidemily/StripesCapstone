@@ -34,6 +34,7 @@ namespace API.Controllers
     
         public string getStatus(DBConnector dbConnection)
         {
+            string temp = "";
             if (dbConnection.OpenConnection())
             {
                 try 
@@ -41,12 +42,13 @@ namespace API.Controllers
                     List<string> queryResult = dbConnection.getNightStatus();
                     foreach(var i in queryResult)
                     {
+                        temp += i + "\n";
                         Console.WriteLine(i);
                     }
                     // Console.WriteLine(queryResult);
                     // if(queryResult[2].Equals("1"))
                     // {
-                        return "running";
+                        return temp;
                     // }
                     // else 
                     // {
