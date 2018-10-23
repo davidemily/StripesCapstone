@@ -30,13 +30,14 @@ namespace API.Controllers
                 try 
                 {
                     List<string> queryResult = dbConnection.getNightStatus();
-                    // if(queryResult[2].Equals("1"))
-                    // {
-                        result.status = queryResult[2];
-                    // }
+                    if(queryResult[2].Equals("1"))
+                    {
+                        result.status = queryResult[1];
+                    }
                 }
                 catch (Exception ex)
                 {
+                    result.status = ex.ToString();
                     // return StatusCode(500);
                 }
                 dbConnection.CloseConnection();
