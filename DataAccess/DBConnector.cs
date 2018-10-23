@@ -70,17 +70,11 @@ namespace API.DataAccess
             if (OpenConnection())
             {
                 MySqlCommand comm = connection.CreateCommand();
-//                comm.Parameters.Add("@person", request.PatronName.ToString());
-//                comm.Parameters.Add("@phone", request.PhoneNumber.ToString());
-//                comm.Parameters.Add("@pickup", request.Pickup.ToString());
-//                comm.Parameters.Add("@dropoff", request.Destination.ToString());
-//                comm.CommandText = "INSERT INTO RIDES (RideId, PatronName, PhoneNumber, NumberOfPeople, Pickup, Destination, Status, TimeRequested, RequestSource,NIGHTS_NightId) VALUES " +
-//                                   "(1, @name, @phone, '1', @pickup, @dropoff, 'waiting', NOW(), 'iphone', 1);";
+
                 comm.CommandText =
                     "INSERT INTO RIDES (RideId, PatronName, PhoneNumber, NumberOfPeople, Pickup, Destination, Status, TimeRequested, RequestSource,NIGHTS_NightId)" +
                     " VALUES " +
-                    //"(1, 'Test', '5555555', '1', 'Test', 'test', 'waiting', NOW(), 'iphone', 1)";
-                    $"({request.RideId}, '{request.PatronName}', '{request.PhoneNumber}', '1', '{request.Pickup}', '{request.Destination}', 'waiting', NOW(), 'iphone', 1)";
+                    $"({request.RideId}, '{request.PatronName}', '{request.PhoneNumber}', '{request.NumberOfPeople}', '{request.Pickup}', '{request.Destination}', 'waiting', NOW(), 'iphone', 1)";
                 if (comm.ExecuteNonQuery() != 1)
                 {
                     Console.WriteLine("did not modify database");

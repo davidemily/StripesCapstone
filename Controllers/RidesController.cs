@@ -17,7 +17,7 @@ namespace API.Controllers
         [HttpPost]
         public ActionResult Post([FromBody] RideRequest request)
         {
-            if (request.PatronName == null || request.PhoneNumber == null || request.Pickup == null || request.Destination == null)
+            if (request.PatronName == null || request.PhoneNumber == null || request.Pickup == null || request.Destination == null || request.NumberOfPeople == null)
             {
                 return BadRequest();
             }

@@ -8,7 +8,7 @@
       <e p="Controllers" t="Include">
         <e p="HealthController.cs" t="Include" />
         <e p="RidesController.cs" t="Include" />
-        <e p="ValuesController.cs" t="Include" />
+        <e p="WaitTimeController.cs" t="Include" />
       </e>
       <e p="DataAccess" t="Include">
         <e p="DBConnector.cs" t="Include" />
