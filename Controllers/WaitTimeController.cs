@@ -28,7 +28,7 @@ namespace API.Controllers
             return result;
         }
 
-        public string getStatus()
+        private string getStatus()
         {
             List<string> queryResult = new List<string>();
             DBConnector dbConnection = new DBConnector();
@@ -41,8 +41,8 @@ namespace API.Controllers
                 return "notRunning";
             }
         }
-
-        public int getWaitTime()
+  
+        private int getWaitTime()
         {
             /*
             Approx. wait time = [(Number of unassigned requested rides * Estimated wait time for unassigned ride in minutes)

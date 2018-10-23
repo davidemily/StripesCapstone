@@ -34,7 +34,7 @@ namespace API
             //trying to get swagger to work
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Stripes App", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
             
         }

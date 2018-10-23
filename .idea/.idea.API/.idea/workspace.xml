@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fcfafba2-eb28-452e-91f5-b21e89d4f703" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.API/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/WaitTimeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/WaitTimeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,25 +26,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="12" />
+          <entry key="cs" value="15" />
           <entry key="json" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="12" />
+          <entry key="C#" value="15" />
           <entry key="JSON" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="2207" />
+          <entry key="cs" value="2233" />
           <entry key="json" value="91" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="2207" />
+          <entry key="C#" value="2233" />
           <entry key="JSON" value="91" />
         </counts>
       </usages-collector>
@@ -56,30 +57,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataAccess/DBConnector.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
-              <caret line="91" selection-start-line="91" selection-end-line="91" />
+            <state relative-caret-position="636">
+              <caret line="122" column="22" selection-start-line="122" selection-start-column="22" selection-end-line="122" selection-end-column="22" />
               <folding>
-                <marker date="1540316102032" expanded="false" signature="6:150" ph="..." />
-                <marker date="1540316102032" expanded="true" signature="176:4120" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="207:4118" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="436:482" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="547:977" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="1054:1274" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="1081:1173" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="1206:1264" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="1341:1614" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="1368:1461" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="1499:1604" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="1695:2526" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="1739:2516" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="2297:2467" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="2582:4102" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="2785:2967" ph="/* get the current date and query the database to see if the night is currently active ... */" />
-                <marker date="1540316102032" expanded="true" signature="3002:4017" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="3075:3732" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="3400:3629" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="3769:3848" ph="{...}" />
-                <marker date="1540316102032" expanded="true" signature="4035:4092" ph="{...}" />
+                <marker date="1540317891082" expanded="false" signature="6:150" ph="..." />
+                <marker date="1540317891082" expanded="true" signature="176:4120" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="207:4118" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="436:482" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="547:977" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="1054:1274" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="1081:1173" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="1206:1264" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="1341:1614" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="1368:1461" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="1499:1604" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="1695:2526" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="1739:2516" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="2297:2467" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="2582:4102" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="2785:2967" ph="/* get the current date and query the database to see if the night is currently active ... */" />
+                <marker date="1540317891082" expanded="true" signature="3002:4017" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="3075:3732" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="3400:3629" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="3769:3848" ph="{...}" />
+                <marker date="1540317891082" expanded="true" signature="4035:4092" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -90,22 +91,56 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="36" column="66" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="66" />
+            <state relative-caret-position="395">
+              <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
               <folding>
-                <marker date="1540317241982" expanded="false" signature="6:521" ph="..." />
-                <marker date="1540317241982" expanded="true" signature="537:1901" ph="{...}" />
-                <marker date="1540317241982" expanded="true" signature="564:1899" ph="{...}" />
-                <marker date="1540317241982" expanded="true" signature="623:686" ph="{...}" />
-                <marker date="1540317241982" expanded="true" signature="909:1246" ph="{...}" />
-                <marker date="1540317241982" expanded="true" signature="1105:1221" ph="{...}" />
-                <marker date="1540317241982" expanded="true" signature="1434:1893" ph="{...}" />
-                <marker date="1540317241982" expanded="true" signature="1481:1558" ph="{...}" />
-                <marker date="1540317241982" expanded="true" signature="1575:1634" ph="{...}" />
-                <marker date="1540317241982" expanded="true" signature="1738:1842" ph="{...}" />
+                <marker date="1540317456414" expanded="true" signature="6:521" ph="..." />
+                <marker date="1540317456414" expanded="true" signature="537:1896" ph="{...}" />
+                <marker date="1540317456414" expanded="true" signature="564:1894" ph="{...}" />
+                <marker date="1540317456414" expanded="true" signature="623:686" ph="{...}" />
+                <marker date="1540317456414" expanded="true" signature="909:1241" ph="{...}" />
+                <marker date="1540317456414" expanded="true" signature="1105:1216" ph="{...}" />
+                <marker date="1540317456414" expanded="true" signature="1429:1888" ph="{...}" />
+                <marker date="1540317456414" expanded="true" signature="1476:1553" ph="{...}" />
+                <marker date="1540317456414" expanded="true" signature="1570:1629" ph="{...}" />
+                <marker date="1540317456414" expanded="true" signature="1733:1837" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Models/WaitTime.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1538961711850" expanded="true" signature="20:139" ph="{...}" />
+                <marker date="1538961711850" expanded="true" signature="48:137" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Controllers/WaitTimeController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+              <folding>
+                <marker date="1540317991109" expanded="true" signature="6:191" ph="..." />
+                <marker date="1540317991109" expanded="true" signature="218:1528" ph="{...}" />
+                <marker date="1540317991109" expanded="true" signature="325:1526" ph="{...}" />
+                <marker date="1540317991109" expanded="true" signature="391:676" ph="{...}" />
+                <marker date="1540317991109" expanded="true" signature="414:487" ph="/* ex for waitTime: 105 = 1 hour 45 min ... */" />
+                <marker date="1540317991109" expanded="true" signature="543:637" ph="{...}" />
+                <marker date="1540317991109" expanded="true" signature="712:1080" ph="{...}" />
+                <marker date="1540317991109" expanded="true" signature="937:999" ph="{...}" />
+                <marker date="1540317991109" expanded="true" signature="1005:1070" ph="{...}" />
+                <marker date="1540317991109" expanded="true" signature="1117:1520" ph="{...}" />
+                <marker date="1540317991109" expanded="true" signature="1140:1486" ph="/* Approx. wait time = [(Number of unassigned requested rides * Estimated wait time for unassigned ride in minute ... */" />
               </folding>
             </state>
           </provider>
@@ -114,10 +149,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+            <state relative-caret-position="180">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
               <folding>
-                <marker date="1538963426169" expanded="false" signature="6:255" ph="..." />
+                <marker date="1538963426169" expanded="true" signature="6:255" ph="..." />
                 <marker date="1538963426169" expanded="true" signature="270:1060" ph="{...}" />
                 <marker date="1538963426169" expanded="true" signature="297:1058" ph="{...}" />
                 <marker date="1538963426169" expanded="true" signature="304:594" ph="/* public static void Main(string[] args) ... */" />
@@ -140,6 +175,23 @@
                 <marker date="1540316576273" expanded="true" signature="588:653" ph="{...}" />
                 <marker date="1540316576273" expanded="true" signature="670:790" ph="{...}" />
                 <marker date="1540316576273" expanded="true" signature="823:891" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controllers/HealthController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <marker date="1540152056244" expanded="false" signature="6:191" ph="..." />
+                <marker date="1540152056244" expanded="true" signature="218:803" ph="{...}" />
+                <marker date="1540152056244" expanded="true" signature="323:801" ph="{...}" />
+                <marker date="1540152056244" expanded="true" signature="393:795" ph="{...}" />
+                <marker date="1540152056244" expanded="true" signature="467:548" ph="{...}" />
+                <marker date="1540152056244" expanded="true" signature="651:757" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -171,6 +223,7 @@
     <setting file="file://$PROJECT_DIR$/DataAccess/DBConnector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/RideRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/WaitTimeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/HealthController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/RidesController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -181,10 +234,11 @@
         <option value="$PROJECT_DIR$/Models/RideRequest.cs" />
         <option value="$PROJECT_DIR$/Controllers/Rides.cs" />
         <option value="$PROJECT_DIR$/Controllers/HealthController.cs" />
-        <option value="$PROJECT_DIR$/DataAccess/DBConnector.cs" />
         <option value="$PROJECT_DIR$/appsettings.json" />
         <option value="$PROJECT_DIR$/Controllers/RidesController.cs" />
         <option value="$PROJECT_DIR$/Startup.cs" />
+        <option value="$PROJECT_DIR$/DataAccess/DBConnector.cs" />
+        <option value="$PROJECT_DIR$/Controllers/WaitTimeController.cs" />
       </list>
     </option>
   </component>
@@ -194,7 +248,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="682" />
     <option name="height" value="740" />
   </component>
@@ -289,12 +343,12 @@
       <workItem from="1538961952414" duration="1708000" />
       <workItem from="1540150192914" duration="8980000" />
       <workItem from="1540316051460" duration="676000" />
-      <workItem from="1540317177566" duration="96000" />
+      <workItem from="1540317177566" duration="829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11460000" />
+    <option name="totallyTimeSpent" value="12193000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -362,64 +416,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/HealthController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/SystemStatus.cs">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/WaitTime.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataAccess/DBConnector.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
-          <folding>
-            <marker date="1540316102032" expanded="false" signature="6:150" ph="..." />
-            <marker date="1540316102032" expanded="true" signature="176:4120" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="207:4118" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="436:482" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="547:977" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="1054:1274" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="1081:1173" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="1206:1264" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="1341:1614" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="1368:1461" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="1499:1604" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="1695:2526" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="1739:2516" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="2297:2467" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="2582:4102" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="2785:2967" ph="/* get the current date and query the database to see if the night is currently active ... */" />
-            <marker date="1540316102032" expanded="true" signature="3002:4017" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="3075:3732" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="3400:3629" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="3769:3848" ph="{...}" />
-            <marker date="1540316102032" expanded="true" signature="4035:4092" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/RidesController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-          <folding>
-            <marker date="1540316576273" expanded="false" signature="6:191" ph="..." />
-            <marker date="1540316576273" expanded="true" signature="218:935" ph="{...}" />
-            <marker date="1540316576273" expanded="true" signature="322:933" ph="{...}" />
-            <marker date="1540316576273" expanded="true" signature="412:927" ph="{...}" />
-            <marker date="1540316576273" expanded="true" signature="588:653" ph="{...}" />
-            <marker date="1540316576273" expanded="true" signature="670:790" ph="{...}" />
-            <marker date="1540316576273" expanded="true" signature="823:891" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/RideRequest.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -441,10 +439,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        <state relative-caret-position="180">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding>
-            <marker date="1538963426169" expanded="false" signature="6:255" ph="..." />
+            <marker date="1538963426169" expanded="true" signature="6:255" ph="..." />
             <marker date="1538963426169" expanded="true" signature="270:1060" ph="{...}" />
             <marker date="1538963426169" expanded="true" signature="297:1058" ph="{...}" />
             <marker date="1538963426169" expanded="true" signature="304:594" ph="/* public static void Main(string[] args) ... */" />
@@ -453,21 +451,112 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Models/WaitTime.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1538961711850" expanded="true" signature="20:139" ph="{...}" />
+            <marker date="1538961711850" expanded="true" signature="48:137" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="36" column="66" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="66" />
+        <state relative-caret-position="395">
+          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
           <folding>
-            <marker date="1540317241982" expanded="false" signature="6:521" ph="..." />
-            <marker date="1540317241982" expanded="true" signature="537:1901" ph="{...}" />
-            <marker date="1540317241982" expanded="true" signature="564:1899" ph="{...}" />
-            <marker date="1540317241982" expanded="true" signature="623:686" ph="{...}" />
-            <marker date="1540317241982" expanded="true" signature="909:1246" ph="{...}" />
-            <marker date="1540317241982" expanded="true" signature="1105:1221" ph="{...}" />
-            <marker date="1540317241982" expanded="true" signature="1434:1893" ph="{...}" />
-            <marker date="1540317241982" expanded="true" signature="1481:1558" ph="{...}" />
-            <marker date="1540317241982" expanded="true" signature="1575:1634" ph="{...}" />
-            <marker date="1540317241982" expanded="true" signature="1738:1842" ph="{...}" />
+            <marker date="1540317456414" expanded="true" signature="6:521" ph="..." />
+            <marker date="1540317456414" expanded="true" signature="537:1896" ph="{...}" />
+            <marker date="1540317456414" expanded="true" signature="564:1894" ph="{...}" />
+            <marker date="1540317456414" expanded="true" signature="623:686" ph="{...}" />
+            <marker date="1540317456414" expanded="true" signature="909:1241" ph="{...}" />
+            <marker date="1540317456414" expanded="true" signature="1105:1216" ph="{...}" />
+            <marker date="1540317456414" expanded="true" signature="1429:1888" ph="{...}" />
+            <marker date="1540317456414" expanded="true" signature="1476:1553" ph="{...}" />
+            <marker date="1540317456414" expanded="true" signature="1570:1629" ph="{...}" />
+            <marker date="1540317456414" expanded="true" signature="1733:1837" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataAccess/DBConnector.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="122" column="22" selection-start-line="122" selection-start-column="22" selection-end-line="122" selection-end-column="22" />
+          <folding>
+            <marker date="1540317891082" expanded="false" signature="6:150" ph="..." />
+            <marker date="1540317891082" expanded="true" signature="176:4120" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="207:4118" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="436:482" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="547:977" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="1054:1274" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="1081:1173" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="1206:1264" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="1341:1614" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="1368:1461" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="1499:1604" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="1695:2526" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="1739:2516" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="2297:2467" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="2582:4102" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="2785:2967" ph="/* get the current date and query the database to see if the night is currently active ... */" />
+            <marker date="1540317891082" expanded="true" signature="3002:4017" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="3075:3732" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="3400:3629" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="3769:3848" ph="{...}" />
+            <marker date="1540317891082" expanded="true" signature="4035:4092" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/RidesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+          <folding>
+            <marker date="1540316576273" expanded="false" signature="6:191" ph="..." />
+            <marker date="1540316576273" expanded="true" signature="218:935" ph="{...}" />
+            <marker date="1540316576273" expanded="true" signature="322:933" ph="{...}" />
+            <marker date="1540316576273" expanded="true" signature="412:927" ph="{...}" />
+            <marker date="1540316576273" expanded="true" signature="588:653" ph="{...}" />
+            <marker date="1540316576273" expanded="true" signature="670:790" ph="{...}" />
+            <marker date="1540316576273" expanded="true" signature="823:891" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/HealthController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <marker date="1540152056244" expanded="false" signature="6:191" ph="..." />
+            <marker date="1540152056244" expanded="true" signature="218:803" ph="{...}" />
+            <marker date="1540152056244" expanded="true" signature="323:801" ph="{...}" />
+            <marker date="1540152056244" expanded="true" signature="393:795" ph="{...}" />
+            <marker date="1540152056244" expanded="true" signature="467:548" ph="{...}" />
+            <marker date="1540152056244" expanded="true" signature="651:757" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/WaitTimeController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding>
+            <marker date="1540317991109" expanded="true" signature="6:191" ph="..." />
+            <marker date="1540317991109" expanded="true" signature="218:1528" ph="{...}" />
+            <marker date="1540317991109" expanded="true" signature="325:1526" ph="{...}" />
+            <marker date="1540317991109" expanded="true" signature="391:676" ph="{...}" />
+            <marker date="1540317991109" expanded="true" signature="414:487" ph="/* ex for waitTime: 105 = 1 hour 45 min ... */" />
+            <marker date="1540317991109" expanded="true" signature="543:637" ph="{...}" />
+            <marker date="1540317991109" expanded="true" signature="712:1080" ph="{...}" />
+            <marker date="1540317991109" expanded="true" signature="937:999" ph="{...}" />
+            <marker date="1540317991109" expanded="true" signature="1005:1070" ph="{...}" />
+            <marker date="1540317991109" expanded="true" signature="1117:1520" ph="{...}" />
+            <marker date="1540317991109" expanded="true" signature="1140:1486" ph="/* Approx. wait time = [(Number of unassigned requested rides * Estimated wait time for unassigned ride in minute ... */" />
           </folding>
         </state>
       </provider>
