@@ -29,7 +29,7 @@ namespace API.Controllers
             {
                 try 
                 {
-                    List<string> queryResult = dbConnection.getNightStatus();
+                    List<string>[] queryResult = dbConnection.getNightStatus();
                     if(queryResult[2].Equals("1"))
                     {
                         result.status = queryResult[1];
