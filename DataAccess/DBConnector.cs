@@ -125,7 +125,7 @@ namespace API.DataAccess
                 {
                     Console.WriteLine(ex);
                 }
-                
+                Console.WriteLine(list[2]);
                 //close the connection
                 CloseConnection();
                 // return the list
