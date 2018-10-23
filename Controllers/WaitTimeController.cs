@@ -41,14 +41,14 @@ namespace API.Controllers
                     List<string> queryResult = new List<string>();
                     queryResult = dbConnection.getNightStatus();
                     // Console.WriteLine(queryResult[0]);
-                    if(queryResult[2].Equals("1"))
-                    {
+                    // if(queryResult[2].Equals("1"))
+                    // {
                         return "running";
-                    }
-                    else 
-                    {
-                        return "notRunning";
-                    }
+                    // }
+                    // else 
+                    // {
+                    //     return "notRunning";
+                    // }
                 }
                 catch (Exception ex)
                 {
