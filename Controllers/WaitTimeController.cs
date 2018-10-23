@@ -25,17 +25,17 @@ namespace API.Controllers
             };
             List<string> queryResult = new List<string>();
             DBConnector dbConnection = new DBConnector();
-            queryResult = dbConnection.getNightStatus();
-            Console.WriteLine(queryResult[1]);
+            
             if (dbConnection.OpenConnection())
             {
                 try 
                 {
-                    
+                    queryResult = dbConnection.getNightStatus();
+                    Console.WriteLine(queryResult[1]);
                     // Console.WriteLine(queryResult);
                     // if(queryResult[2].Equals(1))
                     // {
-                        result.status = queryResult[0].ToString();
+                        // result.status = queryResult[0].ToString();
                     // }
                 }
                 catch (Exception ex)
