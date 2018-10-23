@@ -31,7 +31,7 @@ namespace API.Controllers
                 {
                     List<string>[] queryResult = new List<string>[3];
                     queryResult = dbConnection.getNightStatus();
-                    Console.WriteLine(queryResult);
+                    // Console.WriteLine(queryResult);
                     // if(queryResult[2].Equals(1))
                     // {
                         result.status = queryResult[0].ToString();
