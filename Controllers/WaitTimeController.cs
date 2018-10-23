@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using API.Models;
 using API.DataAccess;
-using System.Linq;
 
 using System.Collections.Generic;
 using System;
@@ -27,9 +26,9 @@ namespace API.Controllers
                 status = getStatus(dbConnection),
                 waitTime = getTime()
             };
-            List<string> queryResult = dbConnection.getNightStatus();
+            List<string> queryResult = new List<string>();
+            queryResult = dbConnection.getNightStatus();
             dbConnection.CloseConnection();
-
             return queryResult;
         }
     
@@ -39,21 +38,17 @@ namespace API.Controllers
             {
                 try 
                 {
-                    List<string> queryResult = dbConnection.getNightStatus();
-                    // List<string> queryResult = dbConnection.getNightStatus();
-                    // this line above will return ["1", "10/21/2018 12:00:00 AM", "1"]
-                    // for some reason after I get the list from the database I am getting a: System.Collections.Generic.List`1[System.String]
-                    // need to figure out how to get this into a list so I can do something like: queryResult[2]
-                    // but for some reason this is giving me an out of bounds...
+                    List<string> queryResult = new List<string>();
+                    queryResult = dbConnection.getNightStatus();
                     // Console.WriteLine(queryResult[0]);
-                    // if(queryResult[2].Equals("1"))
-                    // {
-                        return "queryResult[0]";
-                    // }
-                    // else 
-                    // {
-                    //     return "notRunning";
-                    // }
+                    if(queryResult[2].Equals("1"))
+                    {
+                        return "running";
+                    }
+                    else 
+                    {
+                        return "notRunning";
+                    }
                 }
                 catch (Exception ex)
                 {
