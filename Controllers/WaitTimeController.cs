@@ -34,7 +34,6 @@ namespace API.Controllers
     
         public string getStatus(DBConnector dbConnection)
         {
-            string temp = "";
             if (dbConnection.OpenConnection())
             {
                 try 
@@ -48,7 +47,7 @@ namespace API.Controllers
                     Console.WriteLine(queryResult[0]);
                     // if(queryResult[2].Equals("1"))
                     // {
-                        return temp;
+                        return queryResult[0];
                     // }
                     // else 
                     // {
