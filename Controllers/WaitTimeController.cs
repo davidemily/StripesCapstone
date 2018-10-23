@@ -38,8 +38,12 @@ namespace API.Controllers
             {
                 try 
                 {
-                    List<string> queryResult = dbConnection.getNightStatus().Select(p => p.ToString()).ToList();
-                    Console.WriteLine(queryResult);
+                    List<string> queryResult = dbConnection.getNightStatus();
+                    foreach(var i in queryResult)
+                    {
+                        Console.WriteLine(i);
+                    }
+                    // Console.WriteLine(queryResult);
                     // if(queryResult[2].Equals("1"))
                     // {
                         return "running";
