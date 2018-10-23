@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using API.Models;
 using API.DataAccess;
+using System.Linq;
 
 using System.Collections.Generic;
 using System;
@@ -37,8 +38,7 @@ namespace API.Controllers
             {
                 try 
                 {
-                    List<string> queryResult = new List<string>();
-                    queryResult = dbConnection.getNightStatus().Select(p => p.ToString()).ToList();
+                    List<string> queryResult = dbConnection.getNightStatus().Select(p => p.ToString()).ToList();
                     Console.WriteLine(queryResult);
                     // if(queryResult[2].Equals("1"))
                     // {
