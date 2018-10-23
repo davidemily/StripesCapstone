@@ -33,7 +33,7 @@ namespace API.Controllers
                     queryResult = dbConnection.getNightStatus();
                     if(queryResult[2].Equals("1"))
                     {
-                        result.status = queryResult[1];
+                        result.status = queryResult[1].ToString();
                     }
                 }
                 catch (Exception ex)
