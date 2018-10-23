@@ -32,7 +32,7 @@ namespace API.Controllers
                     List<string>[] queryResult = dbConnection.getNightStatus();
                     if(queryResult[2].Equals("1"))
                     {
-                        result.status = queryResult[1];
+                        result.status = "running";
                     }
                 }
                 catch (Exception ex)
