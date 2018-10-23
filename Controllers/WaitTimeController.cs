@@ -39,13 +39,13 @@ namespace API.Controllers
             {
                 try 
                 {
-                    List<string> queryResult = dbConnection.getNightStatus();
-                    foreach(var i in queryResult)
-                    {
-                        temp += i + " MEMES";
-                        Console.WriteLine(i);
-                    }
-                    // Console.WriteLine(queryResult);
+                    string[] queryResult = dbConnection.getNightStatus();
+                    // List<string> queryResult = dbConnection.getNightStatus();
+                    // this line above will return ["1", "10/21/2018 12:00:00 AM", "1"]
+                    // for some reason after I get the list from the database I am getting a: System.Collections.Generic.List`1[System.String]
+                    // need to figure out how to get this into a list so I can do something like: queryResult[2]
+                    // but for some reason this is giving me an out of bounds...
+                    Console.WriteLine(queryResult[2]);
                     // if(queryResult[2].Equals("1"))
                     // {
                         return temp;
