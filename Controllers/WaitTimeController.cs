@@ -21,10 +21,15 @@ namespace API.Controllers
             // need to calculate 
             WaitTime result = new WaitTime
             {
-                status = "notRunning",
-                waitTime = 105
+                status = getStatus(),
+                waitTime = getTime()
             };
             
+            return result;
+        }
+    
+        public string getStatus()
+        {
             DBConnector dbConnection = new DBConnector();
             
             if (dbConnection.OpenConnection())
@@ -33,10 +38,14 @@ namespace API.Controllers
                 {
                     List<string> queryResult = new List<string>();
                     queryResult = dbConnection.getNightStatus();
-                    Console.WriteLine(queryResult[0].ToString());
+                    Console.WriteLine(queryResult[0]);
                     if(queryResult[2].Equals("1"))
                     {
                         result.status = "running";
+                    }
+                    else 
+                    {
+                        result.status = "notRunning";
                     }
                 }
                 catch (Exception ex)
@@ -46,8 +55,11 @@ namespace API.Controllers
                 }
                 dbConnection.CloseConnection();
             }
+        }
 
-            return result;
+        public int getTime()
+        {
+            return 105;
         }
     }
 }
