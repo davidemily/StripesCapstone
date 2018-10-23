@@ -31,10 +31,10 @@ namespace API.Controllers
                 {
                     List<string>[] queryResult = new List<string>[3];
                     queryResult = dbConnection.getNightStatus();
-                    if(queryResult[2].Equals(1))
-                    {
-                        result.status = queryResult[1].ToString();
-                    }
+                    // if(queryResult[2].Equals(1))
+                    // {
+                        result.status = queryResult[0].ToString();
+                    // }
                 }
                 catch (Exception ex)
                 {
