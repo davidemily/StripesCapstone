@@ -16,7 +16,7 @@ namespace API.Controllers
     public class WaitTimeController : ControllerBase
     {
         [HttpGet]
-        public async Task<string[]> Get()
+        public async Task<List<string>> Get()
         {
             // ex for waitTime: 105 = 1 hour 45 min
             // need to calculate 
@@ -27,7 +27,7 @@ namespace API.Controllers
                 status = getStatus(dbConnection),
                 waitTime = getTime()
             };
-            string[] queryResult = dbConnection.getNightStatus();
+            List<string> queryResult = dbConnection.getNightStatus();
             dbConnection.CloseConnection();
 
             return queryResult;
@@ -39,16 +39,16 @@ namespace API.Controllers
             {
                 try 
                 {
-                    string[] queryResult = dbConnection.getNightStatus();
+                    List<string> queryResult = dbConnection.getNightStatus();
                     // List<string> queryResult = dbConnection.getNightStatus();
                     // this line above will return ["1", "10/21/2018 12:00:00 AM", "1"]
                     // for some reason after I get the list from the database I am getting a: System.Collections.Generic.List`1[System.String]
                     // need to figure out how to get this into a list so I can do something like: queryResult[2]
                     // but for some reason this is giving me an out of bounds...
-                    Console.WriteLine(queryResult[0]);
+                    // Console.WriteLine(queryResult[0]);
                     // if(queryResult[2].Equals("1"))
                     // {
-                        return queryResult[0];
+                        return "queryResult[0]";
                     // }
                     // else 
                     // {
