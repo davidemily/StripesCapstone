@@ -132,6 +132,9 @@ namespace API.DataAccess
             }
             else 
             {
+                list[0].Add("BITCONNECT");
+                list[1].Add("BITCONNECT");
+                list[2].Add("BITCONNECT");
                 return list;
             }
         }

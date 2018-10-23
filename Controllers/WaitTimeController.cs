@@ -25,11 +25,13 @@ namespace API.Controllers
             };
             List<string>[] queryResult = new List<string>[3];
             DBConnector dbConnection = new DBConnector();
+            queryResult = dbConnection.getNightStatus();
+            Console.WriteLine("I AM HERE!");
             if (dbConnection.OpenConnection())
             {
                 try 
                 {
-                    queryResult = dbConnection.getNightStatus();
+                    
                     // Console.WriteLine(queryResult);
                     // if(queryResult[2].Equals(1))
                     // {
