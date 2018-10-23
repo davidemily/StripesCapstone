@@ -33,7 +33,7 @@ namespace API.Controllers
             List<string> queryResult = new List<string>();
             DBConnector dbConnection = new DBConnector();
             queryResult = dbConnection.getNightStatus();
-            if(queryResult[2])
+            if(queryResult[2] == "True")
             {
                 return "running";
             } else 
