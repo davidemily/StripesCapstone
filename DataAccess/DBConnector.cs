@@ -99,12 +99,13 @@ namespace API.DataAccess
             list[1] = new List<string>();
             list[2] = new List<string>();
 
-            string query = "SELECT * FROM NIGHTS";
+            string query = "Select * from NIGHTS where Night='2018-10-21";
             // get the current date and query the database to see if the night is currently active
             // however for testing purposes going to be using a static entry in the database...
 
             if (OpenConnection())
             {
+                Console.WriteLine("I MADE IT TO HERE 1!");
                 // MySqlCommand comm = connection.CreateCommand();
                 // comm.CommandText = query;
 
@@ -120,6 +121,7 @@ namespace API.DataAccess
                     list[1].Add(dataReader["Night"] + "");
                     list[2].Add(dataReader["IsActive"] + "");
                 }
+                Console.WriteLine("I MADE IT TO HERE! 2");
 
                 // close the data reader
                 dataReader.Close();
