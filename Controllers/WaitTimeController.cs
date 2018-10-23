@@ -23,7 +23,7 @@ namespace API.Controllers
             {
                 waitTime = 105
             };
-            List<string> queryResult = new List<string>;
+            List<string> queryResult = new List<string>();
             DBConnector dbConnection = new DBConnector();
             queryResult = dbConnection.getNightStatus();
             if (dbConnection.OpenConnection())
