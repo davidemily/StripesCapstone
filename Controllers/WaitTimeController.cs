@@ -19,52 +19,33 @@ namespace API.Controllers
         {
             // ex for waitTime: 105 = 1 hour 45 min
             // need to calculate 
-            DBConnector dbConnection = new DBConnector();
-
             WaitTime result = new WaitTime
             {
-                status = getStatus(dbConnection),
-                waitTime = getTime()
+                waitTime = 105
             };
             List<string> queryResult = new List<string>();
+            DBConnector dbConnection = new DBConnector();
             queryResult = dbConnection.getNightStatus();
-            dbConnection.CloseConnection();
-            return queryResult;
-        }
-    
-        public string getStatus(DBConnector dbConnection)
-        {
             if (dbConnection.OpenConnection())
             {
                 try 
                 {
-                    List<string> queryResult = new List<string>();
-                    queryResult = dbConnection.getNightStatus();
-                    // Console.WriteLine(queryResult[0]);
-                    // if(queryResult[2].Equals("1"))
+                    
+                    // Console.WriteLine(queryResult);
+                    // if(queryResult[2].Equals(1))
                     // {
-                        return "running";
-                    // }
-                    // else 
-                    // {
-                    //     return "notRunning";
+                        result.status = queryResult[0].ToString();
                     // }
                 }
                 catch (Exception ex)
                 {
-                    return ex.ToString();
+                    result.status = ex.ToString();
                     // return StatusCode(500);
                 }
+                dbConnection.CloseConnection();
             }
-            else 
-            {
-                return "";
-            }
-        }
 
-        public int getTime()
-        {
-            return 105;
+            return queryResult;
         }
     }
 }
