@@ -102,9 +102,6 @@ namespace API.DataAccess
 
             if (OpenConnection())
             {
-                // MySqlCommand comm = connection.CreateCommand();
-                // comm.CommandText = query;
-
                 // create the command
                 try {
                     MySqlCommand cmd = new MySqlCommand(query, connection);
@@ -136,5 +133,7 @@ namespace API.DataAccess
                 return list;
             }
         }
+
+        
     }
 }

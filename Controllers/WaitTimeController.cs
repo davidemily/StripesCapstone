@@ -33,7 +33,7 @@ namespace API.Controllers
             List<string> queryResult = new List<string>();
             DBConnector dbConnection = new DBConnector();
             queryResult = dbConnection.getNightStatus();
-            if(queryResult[2] != "True")
+            if(queryResult[2] == "True")
             {
                 return "running";
             } else 
@@ -44,6 +44,11 @@ namespace API.Controllers
 
         public int getWaitTime()
         {
+            /*
+            Approx. wait time = [(Number of unassigned requested rides * Estimated wait time for unassigned ride in minutes)
+                                +(Number assigned rides * estimated wait time of assigned ride in minutes * amount of patrons dropped off per location)] 
+                                / Number of cars
+             */
             return 105;
         }
     }
