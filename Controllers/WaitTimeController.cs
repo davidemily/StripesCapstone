@@ -27,7 +27,7 @@ namespace API.Controllers
                 waitTime = getTime()
             };
 
-            dbConnection.CloseConnection()
+            dbConnection.CloseConnection();
             return result;
         }
     
