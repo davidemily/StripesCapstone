@@ -4453,10 +4453,11 @@
   },
   "libraries": {
     "Google.Protobuf/3.5.1": {
-      "sha512": "f2k1VNaB9bfvEsvARzzEL1TZiIpL33KKK3JMH7UANlPlJVptuvsk4qpBZEnz0pORWZOdUHlVwMQuUzFqjJYCxA==",
+      "sha512": "j/gbpRZ68sgvdi/vXI39Cj/jWG4d1dtDqfWbkjC9dErNWu/dFcIlq1LIgLscea+llZ6nzm06wz/JGziOegAL7Q==",
       "type": "package",
       "path": "google.protobuf/3.5.1",
       "files": [
+        ".signature.p7s",
         "google.protobuf.3.5.1.nupkg.sha512",
         "google.protobuf.nuspec",
         "lib/net45/Google.Protobuf.dll",
@@ -6896,10 +6897,11 @@
       ]
     },
     "MySql.Data/8.0.12": {
-      "sha512": "I2jGfuyeomrGJ+N9O+vuV2ucyeayf/tMFREKPdjUcs1/wUF0t+WgUnnzJmJl4sNePNR1fEvAGaGbVAo4uLSF2A==",
+      "sha512": "vcVmD7C/socXjlyzY2vjF+bq/NdxrMtQqPym9pZxk6qfUK7dq/KX8XrY/wa5TYp3IHM1JR0UzEfBKNCGmtr1Lg==",
       "type": "package",
       "path": "mysql.data/8.0.12",
       "files": [
+        ".signature.p7s",
         "lib/net452/MySql.Data.dll",
         "lib/net452/MySql.Data.xml",
         "lib/netcoreapp2.0/MySql.Data.dll",
@@ -11761,23 +11763,23 @@
     ]
   },
   "packageFolders": {
-    "/home/david/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/Users/sarahtwomey/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/david/Capstone/API/API.csproj",
+      "projectUniqueName": "/Users/sarahtwomey/Documents/Capstone/StripesCapstone/API.csproj",
       "projectName": "API",
-      "projectPath": "/home/david/Capstone/API/API.csproj",
-      "packagesPath": "/home/david/.nuget/packages/",
-      "outputPath": "/home/david/Capstone/API/obj/",
+      "projectPath": "/Users/sarahtwomey/Documents/Capstone/StripesCapstone/API.csproj",
+      "packagesPath": "/Users/sarahtwomey/.nuget/packages/",
+      "outputPath": "/Users/sarahtwomey/Documents/Capstone/StripesCapstone/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/david/.config/NuGet/NuGet.Config"
+        "/Users/sarahtwomey/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -11806,7 +11808,6 @@
             "autoReferenced": true
           },
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true

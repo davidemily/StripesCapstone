@@ -40,3 +40,17 @@
 /home/stripesdev/stripesWebApis/API/obj/Debug/netcoreapp2.1/API.RazorTargetAssemblyInfo.cache
 /home/stripesdev/stripesWebApis/API/obj/Debug/netcoreapp2.1/API.dll
 /home/stripesdev/stripesWebApis/API/obj/Debug/netcoreapp2.1/API.pdb
+/Users/sarahtwomey/Documents/Capstone/StripesCapstone/obj/Debug/netcoreapp2.1/API.csprojAssemblyReference.cache
+/Users/sarahtwomey/Documents/Capstone/StripesCapstone/obj/Debug/netcoreapp2.1/API.csproj.CoreCompileInputs.cache
+/Users/sarahtwomey/Documents/Capstone/StripesCapstone/obj/Debug/netcoreapp2.1/API.RazorAssemblyInfo.cache
+/Users/sarahtwomey/Documents/Capstone/StripesCapstone/obj/Debug/netcoreapp2.1/API.RazorAssemblyInfo.cs
+/Users/sarahtwomey/Documents/Capstone/StripesCapstone/obj/Debug/netcoreapp2.1/API.AssemblyInfoInputs.cache
+/Users/sarahtwomey/Documents/Capstone/StripesCapstone/obj/Debug/netcoreapp2.1/API.AssemblyInfo.cs
+/Users/sarahtwomey/Documents/Capstone/StripesCapstone/obj/Debug/netcoreapp2.1/API.dll
+/Users/sarahtwomey/Documents/Capstone/StripesCapstone/obj/Debug/netcoreapp2.1/API.pdb
+/Users/sarahtwomey/Documents/Capstone/StripesCapstone/bin/Debug/netcoreapp2.1/API.deps.json
+/Users/sarahtwomey/Documents/Capstone/StripesCapstone/bin/Debug/netcoreapp2.1/API.runtimeconfig.json
+/Users/sarahtwomey/Documents/Capstone/StripesCapstone/bin/Debug/netcoreapp2.1/API.runtimeconfig.dev.json
+/Users/sarahtwomey/Documents/Capstone/StripesCapstone/bin/Debug/netcoreapp2.1/API.dll
+/Users/sarahtwomey/Documents/Capstone/StripesCapstone/bin/Debug/netcoreapp2.1/API.pdb
+/Users/sarahtwomey/Documents/Capstone/StripesCapstone/obj/Debug/netcoreapp2.1/API.RazorTargetAssemblyInfo.cache

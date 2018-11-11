@@ -84,6 +84,12 @@ namespace API.DataAccess
             }
         }
 
+        /* unsure if i need to connect this to database at all
+        public void LeaveComment(RideRequest request) 
+        {
+            //figure out what the heck to do 
+        }*/
+
         
         public List<string> getNightStatus() 
         {

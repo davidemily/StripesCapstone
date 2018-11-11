@@ -10,8 +10,8 @@ using System;
 
 namespace API.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    [Route("api/[controller]")] 
+    [ApiController] 
     public class RidesController : ControllerBase
     {
         [HttpPost]
