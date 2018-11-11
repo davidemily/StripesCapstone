@@ -38,7 +38,7 @@ namespace API.Controllers
             return Ok();
 
         }*/
-
+        [HttpPost]
         public void sendEmail() {
             Console.WriteLine("test");
             
@@ -54,16 +54,15 @@ namespace API.Controllers
 
                 // Subject and multipart/alternative Body
                 mailMsg.Subject = "Patron Comment";
-                string text = "text body test";
-                string html = @"<p>html body</p>";
-                mailMsg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(text, null, MediaTypeNames.Text.Plain));
-                mailMsg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(html, null, MediaTypeNames.Text.Html));
+                mailMsg.Body = "test from stripes";
+                
 
                 // Init SmtpClient and send
                 SmtpClient smtpClient = new SmtpClient("smtp.sendgrid.net", Convert.ToInt32(587));
+                smtpClient.EnableSsl = true;
                 System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("STRIPESComments@gmail.com", "1qaz@wsx#edc4");
                 smtpClient.Credentials = credentials;
-
+                smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtpClient.Send(mailMsg);
             }
             
@@ -71,6 +70,6 @@ namespace API.Controllers
             {
                 Console.WriteLine(ex.Message);
             }
-                }
+        }
     }
 }
