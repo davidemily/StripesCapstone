@@ -15,17 +15,27 @@ namespace API.Controllers
     public class RidesController : ControllerBase
     {
         [HttpPost]
-        public ActionResult Post([FromBody] RideRequest request)
+        public ActionResult Post([FromBody] PhoneRideRequest request)
         {
-            if (request.PatronName == null || request.PhoneNumber == null || request.Pickup == null || request.Destination == null || request.NumberOfPeople == null)
+            if (request.dropoffs == null || request.passengers == null || request.firstName == null ||
+                request.homeAddress == null || request.pickupLocation == null || request.cellPhoneNumber == null)
             {
                 return BadRequest();
             }
 
+            var convertedRideRequest = new RideRequest()
+            {
+                Pickup = request.pickupLocation,
+                PhoneNumber = request.cellPhoneNumber,
+                NumberOfPeople = request.passengers,
+                Destination = request.homeAddress,
+                PatronName = request.firstName
+            };   
+            
             try
             {
                 DBConnector db = new DBConnector();
-                db.InsertRide(request);
+                db.InsertRide(convertedRideRequest);
             }
             catch (Exception ex)
             {
