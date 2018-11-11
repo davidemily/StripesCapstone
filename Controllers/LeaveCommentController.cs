@@ -47,28 +47,27 @@ namespace API.Controllers
                 MailMessage mailMsg = new MailMessage();
 
                 // To
-                mailMsg.To.Add(new MailAddress("STRIPESComments@gmail.com", "To STRIPES")); //testing for now
+                mailMsg.To.Add(new MailAddress("STRIPESComments@gmail.com")); //testing for now
 
                 // From
-                mailMsg.From = new MailAddress("STRIPESComments@gmail.com", "Patron"); //this will have to change
+                mailMsg.From = new MailAddress("STRIPESComments@gmail.com"); //this will have to change
 
                 // Subject and multipart/alternative Body
                 mailMsg.Subject = "Patron Comment";
-                mailMsg.Body = "test from stripes";
+                mailMsg.Body = "test from stripes capstone";
                 
 
                 // Init SmtpClient and send
-                SmtpClient smtpClient = new SmtpClient("smtp.sendgrid.net", Convert.ToInt32(587));
-                smtpClient.EnableSsl = true;
-                System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("STRIPESComments@gmail.com", "1qaz@wsx#edc4");
+                SmtpClient smtpClient = new SmtpClient();
+                smtpClient.Port = 587;
+                var credentials = new System.Net.NetworkCredential("STRIPESComments@gmail.com", "1qaz@wsx#edc4");
                 smtpClient.Credentials = credentials;
-                smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtpClient.Send(mailMsg);
             }
             
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.Message + " " + ex.InnerException);
             }
         }
     }
