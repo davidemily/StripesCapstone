@@ -5,6 +5,7 @@ using System.Text;
 using System.IO;
 using API.Models;
 using MySql.Data.MySqlClient;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace API.DataAccess
 {
@@ -134,6 +135,45 @@ namespace API.DataAccess
             }
         }
 
-        
+
+        public bool IsNightActive(DateTime todaysDate)
+        {
+            int response = 0;
+            string query = $"Select * FROM NIGHTS WHERE IsActive='1' AND Night='{todaysDate}';";
+            if (OpenConnection())
+            {
+                MySqlCommand comm = connection.CreateCommand();
+                comm.CommandText = query;
+                response = comm.ExecuteNonQuery();
+                CloseConnection();
+            }
+            if (response > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public void CreateNewNight(DateTime todaysDate)
+        {
+
+            string query = $"INSERT INTO NIGHTS (Night, IsActive) VALUES ({todaysDate}, 1);";
+            try
+            {
+                if (OpenConnection())
+                {
+                    MySqlCommand comm = connection.CreateCommand();
+                    comm.CommandText = query;
+                    comm.ExecuteNonQuery();
+                    CloseConnection();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("something bad happened with creating a date");
+            }
+
+            return;
+        }
     }
 }
