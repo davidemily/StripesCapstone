@@ -19,26 +19,27 @@ namespace API.Controllers
     public class LeaveCommentController : ControllerBase
     {
         [HttpPost]
-        public void sendEmail() {
+        public void Post([FromBody] string commentToEmail)
+        {
             try
             {
                 MailMessage mailMsg = new MailMessage();
 
                 // To
-                mailMsg.To.Add(new MailAddress("STRIPESComments@gmail.com")); //testing for now
+                mailMsg.To.Add(new MailAddress("STRIPESComments@gmail.com"));
 
                 // From
-                mailMsg.From = new MailAddress("STRIPESComments@gmail.com"); //this will have to change
+                mailMsg.From = new MailAddress("STRIPESComments@gmail.com");
 
                 // Subject and multipart/alternative Body
                 mailMsg.Subject = "Patron Comment";
-                mailMsg.Body = "test from stripes capstone";
-                
+                mailMsg.Body = commentToEmail;
 
                 // Init SmtpClient and send
-                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", Convert.ToInt32(587));
-                smtpClient.Port = 587;
-                smtpClient.EnableSsl = true;
+                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", Convert.ToInt32(587))
+                {
+                    Port = 587, EnableSsl = true
+                };
                 var credentials = new System.Net.NetworkCredential("STRIPESComments@gmail.com", "1qaz@wsx#edc4");
                 smtpClient.Credentials = credentials;
                 smtpClient.Send(mailMsg);
