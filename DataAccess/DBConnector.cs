@@ -159,21 +159,14 @@ namespace API.DataAccess
         {
 
             string query = $"INSERT INTO NIGHTS (Night, IsActive) VALUES ({todaysDate}, 1);";
-            try
-            {
-                if (OpenConnection())
-                {
-                    MySqlCommand comm = connection.CreateCommand();
-                    comm.CommandText = query;
-                    comm.ExecuteNonQuery();
-                    CloseConnection();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("something bad happened with creating a date");
-            }
 
+            if (OpenConnection())
+            {
+                MySqlCommand comm = connection.CreateCommand();
+                comm.CommandText = query;
+                comm.ExecuteNonQuery();
+                CloseConnection();
+            }
             return;
         }
     }
