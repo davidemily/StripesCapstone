@@ -23,6 +23,7 @@ namespace API.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message + ex.InnerException);
                 return BadRequest();
             }
 
