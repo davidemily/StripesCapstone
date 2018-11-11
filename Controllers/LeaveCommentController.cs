@@ -18,30 +18,8 @@ namespace API.Controllers
     [ApiController] 
     public class LeaveCommentController : ControllerBase
     {
-        /* HttpPost]
-        public ActionResult Post([FromBody] RideRequest request)
-        {
-            if (request.PatronName == null || request.PhoneNumber == null || request.Pickup == null || request.Destination == null || request.NumberOfPeople == null)
-            {
-                return BadRequest();
-            }
-
-            try
-            {
-                DBConnector db = new DBConnector();
-                db.LeaveComment(request);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500);
-            }
-            return Ok();
-
-        }*/
         [HttpPost]
         public void sendEmail() {
-            Console.WriteLine("test");
-            
             try
             {
                 MailMessage mailMsg = new MailMessage();
@@ -58,7 +36,7 @@ namespace API.Controllers
                 
 
                 // Init SmtpClient and send
-                SmtpClient smtpClient = new SmtpClient();
+                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", Convert.ToInt32(587));
                 smtpClient.Port = 587;
                 var credentials = new System.Net.NetworkCredential("STRIPESComments@gmail.com", "1qaz@wsx#edc4");
                 smtpClient.Credentials = credentials;
