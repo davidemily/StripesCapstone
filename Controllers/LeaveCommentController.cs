@@ -38,6 +38,7 @@ namespace API.Controllers
                 // Init SmtpClient and send
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", Convert.ToInt32(587));
                 smtpClient.Port = 587;
+                smtpClient.EnableSsl = true;
                 var credentials = new System.Net.NetworkCredential("STRIPESComments@gmail.com", "1qaz@wsx#edc4");
                 smtpClient.Credentials = credentials;
                 smtpClient.Send(mailMsg);
