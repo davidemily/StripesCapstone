@@ -30,25 +30,26 @@ namespace API.Controllers
 
         private string getStatus()
         {
-            List<string> queryResult = new List<string>();
+            bool running = false;
             DBConnector dbConnection = new DBConnector();
-            queryResult = dbConnection.getNightStatus();
-            if(queryResult[2] == "True")
+            var todaysDate = DateTime.Today.ToString("yyyy-MM-dd");
+            try
             {
-                return "running";
-            } else 
-            {
-                return "notRunning";
+                if(dbConnection.IsNightActive(todaysDate))
+                {
+                    return "running";
+                }
             }
+            catch (Exception ex)
+            {
+                return "error";
+            }
+            return "notRunning";
+            
         }
   
         private int getWaitTime()
         {
-            /*
-            Approx. wait time = [(Number of unassigned requested rides * Estimated wait time for unassigned ride in minutes)
-                                +(Number assigned rides * estimated wait time of assigned ride in minutes * amount of patrons dropped off per location)] 
-                                / Number of cars
-             */
             return 105;
         }
     }
