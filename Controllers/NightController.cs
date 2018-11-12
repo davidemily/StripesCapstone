@@ -20,7 +20,7 @@ namespace API.Controllers
                 Console.WriteLine(todaysDate);
                 if (dbConnector.IsNightActive(todaysDate) == false)
                 {
-//                    dbConnector.CreateNewNight(todaysDate);
+                    dbConnector.CreateNewNight(todaysDate);
                 }
             }
             catch (Exception ex)

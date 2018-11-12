@@ -158,8 +158,8 @@ namespace API.DataAccess
 
         public void CreateNewNight(string todaysDate)
         {
-
-            string query = $"INSERT INTO NIGHTS (Night, IsActive) VALUES ({todaysDate}, 1);";
+            Console.WriteLine(todaysDate);
+            string query = $"INSERT INTO NIGHTS (Night, IsActive) VALUES ('{todaysDate}', 1);";
 
             if (OpenConnection())
             {
