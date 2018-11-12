@@ -138,7 +138,6 @@ namespace API.DataAccess
 
         public bool IsNightActive(string todaysDate)
         {
-            Console.WriteLine(todaysDate);
             string query = $"Select * FROM NIGHTS WHERE IsActive='1' AND Night='{todaysDate}';";
             
             if (OpenConnection())
@@ -157,7 +156,6 @@ namespace API.DataAccess
 
         public void CreateNewNight(string todaysDate)
         {
-            Console.WriteLine(todaysDate);
             string query = $"INSERT INTO NIGHTS (Night, IsActive) VALUES ('{todaysDate}', 1);";
 
             if (OpenConnection())

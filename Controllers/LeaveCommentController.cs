@@ -19,7 +19,7 @@ namespace API.Controllers
     public class LeaveCommentController : ControllerBase
     {
         [HttpPost]
-        public void Post([FromBody] string commentToEmail)
+        public void Post([FromBody] CommentRequest commentToEmail)
         {
             try
             {
@@ -33,7 +33,7 @@ namespace API.Controllers
 
                 // Subject and multipart/alternative Body
                 mailMsg.Subject = "Patron Comment";
-                mailMsg.Body = commentToEmail;
+                mailMsg.Body = commentToEmail.comment;
 
                 // Init SmtpClient and send
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", Convert.ToInt32(587))
