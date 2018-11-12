@@ -17,7 +17,6 @@ namespace API.Controllers
 
             try
             {
-                Console.WriteLine(todaysDate);
                 if (dbConnector.IsNightActive(todaysDate) == false)
                 {
                     Console.WriteLine("night does not exist");
