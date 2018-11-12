@@ -18,6 +18,7 @@ namespace API.Controllers
             {
                 Console.WriteLine(todaysDate);
                 Console.WriteLine(DateTime.Today);
+                Console.WriteLine(DateTime.Now);
                 if (!dbConnector.IsNightActive(todaysDate))
                 {
                     dbConnector.CreateNewNight(todaysDate);
