@@ -13,13 +13,14 @@ namespace API.Controllers
         {
             var dbConnector = new DBConnector();
             //get hours 9 hours from utc or 3 hours before central time to cover open till 3
-            var todaysDate = DateTime.Today.ToString("yyyy-mm-dd");
+            var todaysDate = DateTime.Today.ToString("yyyy-MM-dd");
 
             try
             {
                 Console.WriteLine(todaysDate);
                 if (dbConnector.IsNightActive(todaysDate) == false)
                 {
+                    Console.WriteLine("night does not exist");
                     dbConnector.CreateNewNight(todaysDate);
                 }
             }
