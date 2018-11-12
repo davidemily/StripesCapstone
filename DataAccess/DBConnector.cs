@@ -139,19 +139,18 @@ namespace API.DataAccess
         public bool IsNightActive(string todaysDate)
         {
             Console.WriteLine(todaysDate);
-            int response = 0;
             string query = $"Select * FROM NIGHTS WHERE IsActive='1' AND Night='{todaysDate}';";
             
             if (OpenConnection())
             {
                 MySqlCommand comm = connection.CreateCommand();
                 comm.CommandText = query;
-                response = comm.ExecuteNonQuery();
+                var response = comm.ExecuteReader();
+                if (response.FieldCount > 0)
+                {
+                    return true;
+                }
                 CloseConnection();
-            }
-            if (response > 0)
-            {
-                return true;
             }
             return false;
         }
