@@ -136,7 +136,7 @@ namespace API.DataAccess
         }
 
 
-        public bool IsNightActive(DateTime todaysDate)
+        public bool IsNightActive(string todaysDate)
         {
             int response = 0;
             string query = $"Select * FROM NIGHTS WHERE IsActive='1' AND Night='{todaysDate}';";
@@ -155,7 +155,7 @@ namespace API.DataAccess
             return false;
         }
 
-        public void CreateNewNight(DateTime todaysDate)
+        public void CreateNewNight(string todaysDate)
         {
 
             string query = $"INSERT INTO NIGHTS (Night, IsActive) VALUES ({todaysDate}, 1);";
