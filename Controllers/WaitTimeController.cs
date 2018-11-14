@@ -38,7 +38,8 @@ namespace API.Controllers
         {
             bool running = false;
             
-            var todaysDate = DateTime.Today.ToString("yyyy-MM-dd");
+            var todaysDate = DateTime.Today.AddHours(-3).ToString("yyyy-MM-dd");
+            Console.WriteLine(todaysDate);
             try
             {
                 if( _dbConnector.IsNightActive(todaysDate))
@@ -56,14 +57,12 @@ namespace API.Controllers
   //Approx. wait time =
   //[(Number of unassigned requested rides * Estimated wait time for unassigned ride in minutes)
   //+
-  //(Number assigned rides * estimated wait time of assigned ride in minutes * amount of patrons dropped off per location)] / Number of cars
+  //(Number assigned rides * estimated wait time of assigned ride in minutes)] / Number of cars
         private float getWaitTime()
         {
             int numOfUnassignedRides = 0;
             int numOfAssignedRides = 0;
-
             int numOfRidingRides = 0;
-            
             int numOfCarsRunning = 0;
 
             numOfUnassignedRides = _dbConnector.GetUnassignedRides();
