@@ -95,9 +95,9 @@ namespace API.DataAccess
                 MySqlCommand comm = connection.CreateCommand();
                 comm.CommandText = query;
                 var response = comm.ExecuteReader();
-                CloseConnection();
                 if (response.FieldCount > 0)
                 {
+                    CloseConnection();
                     return true;       
                 }
             }
