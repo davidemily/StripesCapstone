@@ -17,7 +17,7 @@ namespace API.Controllers
     {
         private int _estWaitTimeOfUnassigned = 20;
         private int _estWaitTimeOfAssigned = 10;
-        private int __estWaitTimeOfRiding = 5;
+        private const int __estWaitTimeOfRiding = 5;
         private readonly DBConnector _dbConnector = new DBConnector();
 
         [HttpGet]
@@ -57,7 +57,7 @@ namespace API.Controllers
   //[(Number of unassigned requested rides * Estimated wait time for unassigned ride in minutes)
   //+
   //(Number assigned rides * estimated wait time of assigned ride in minutes * amount of patrons dropped off per location)] / Number of cars
-        private int getWaitTime()
+        private float getWaitTime()
         {
             int numOfUnassignedRides = 0;
             int numOfAssignedRides = 0;
@@ -69,11 +69,12 @@ namespace API.Controllers
             numOfUnassignedRides = _dbConnector.GetUnassignedRides();
             numOfAssignedRides = _dbConnector.GetAssignedRides();
             numOfRidingRides = _dbConnector.GetRidingRides();
-//
-//            numOfStopsPerRide = _dbConnector.GetStopsPerRide();
-
             numOfCarsRunning = _dbConnector.GetNumberCarsRunning();
-            return numOfUnassignedRides + numOfAssignedRides + numOfRidingRides + numOfCarsRunning;
+
+            return ((((numOfAssignedRides * _estWaitTimeOfAssigned) +
+                             (numOfUnassignedRides * _estWaitTimeOfUnassigned)) +
+                                (numOfRidingRides * __estWaitTimeOfRiding))
+                                    / numOfCarsRunning);
         }
     }
 }
