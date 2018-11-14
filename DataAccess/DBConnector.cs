@@ -167,5 +167,20 @@ namespace API.DataAccess
             }
             return;
         }
+
+        public int GetUnassignedRides()
+        {
+            string query = "SELECT COUNT(*) FROM RIDES WHERE Status = 'waiting';";
+            int result = 0;
+            if (OpenConnection())
+            {
+                MySqlCommand comm = connection.CreateCommand();
+                comm.CommandText = query;
+                result = Convert.ToInt32(comm.ExecuteScalar());
+                CloseConnection();
+            }
+            
+            return result;
+        }
     }
 }

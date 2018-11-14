@@ -7,6 +7,7 @@ using API.DataAccess;
 
 using System.Collections.Generic;
 using System;
+using Microsoft.AspNetCore.Razor.Language.Extensions;
 
 namespace API.Controllers
 {
@@ -14,6 +15,11 @@ namespace API.Controllers
     [ApiController]
     public class WaitTimeController : ControllerBase
     {
+        private int _estWaitTimeOfUnassigned = 20;
+        private int _estWaitTimeOfAssigned = 10;
+        private int __estWaitTimeOfRiding = 5;
+        private readonly DBConnector _dbConnector = new DBConnector();
+
         [HttpGet]
         public async Task<WaitTime> Get()
         {
@@ -31,11 +37,11 @@ namespace API.Controllers
         private string getStatus()
         {
             bool running = false;
-            DBConnector dbConnection = new DBConnector();
+            
             var todaysDate = DateTime.Today.ToString("yyyy-MM-dd");
             try
             {
-                if(dbConnection.IsNightActive(todaysDate))
+                if(_dbConnector.IsNightActive(todaysDate))
                 {
                     return "running";
                 }
@@ -47,10 +53,33 @@ namespace API.Controllers
             return "notRunning";
             
         }
-  
+  //Approx. wait time =
+  //[(Number of unassigned requested rides * Estimated wait time for unassigned ride in minutes)
+  //+
+  //(Number assigned rides * estimated wait time of assigned ride in minutes * amount of patrons dropped off per location)] / Number of cars
         private int getWaitTime()
         {
-            return 105;
+            
+            int numOfUnassignedRides = 0;
+            
+//            int numOfAssignedRides = 0;
+//
+//            int numOfRidingRides = 0;
+//
+//            float numOfStopsPerRide = 0;
+//            
+//            int numOfCarsRunning = 0;
+
+            numOfUnassignedRides = _dbConnector.GetUnassignedRides();
+
+//            numOfAssignedRides = _dbConnector.GetAssignedRides();
+//
+//            numOfRidingRides = _dbConnector.GetRidingRides();
+//
+//            numOfStopsPerRide = _dbConnector.GetStopsPerRide();
+//
+//            numOfCarsRunning = _dbConnector.GetNumberCarsRunning();
+            return numOfUnassignedRides;
         }
     }
 }
