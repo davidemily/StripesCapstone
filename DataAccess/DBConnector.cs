@@ -99,8 +99,8 @@ namespace API.DataAccess
                 {
                     return true;
                 }
-                CloseConnection();
             }
+            CloseConnection();
             return false;
         }
 
@@ -122,7 +122,6 @@ namespace API.DataAccess
         {
             string query = "SELECT COUNT(*) FROM RIDES WHERE Status = 'waiting';";
             int result = 0;
-            CloseConnection();
             if (OpenConnection())
             {
                 Console.WriteLine("connected to database");
