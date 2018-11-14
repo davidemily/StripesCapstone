@@ -60,8 +60,6 @@ namespace API.Controllers
         private int getWaitTime()
         {
             
-            int numOfUnassignedRides = 0;
-            
 //            int numOfAssignedRides = 0;
 //
 //            int numOfRidingRides = 0;
@@ -70,7 +68,7 @@ namespace API.Controllers
 //            
 //            int numOfCarsRunning = 0;
 
-            numOfUnassignedRides = _dbConnector.GetUnassignedRides();
+            int numOfUnassignedRides = _dbConnector.GetUnassignedRides();
 
 //            numOfAssignedRides = _dbConnector.GetAssignedRides();
 //

@@ -177,9 +177,10 @@ namespace API.DataAccess
                 MySqlCommand comm = connection.CreateCommand();
                 comm.CommandText = query;
                 result = Convert.ToInt32(comm.ExecuteScalar());
+                Console.WriteLine("executed query");
                 CloseConnection();
             }
-            
+            Console.WriteLine(result);
             return result;
         }
     }
