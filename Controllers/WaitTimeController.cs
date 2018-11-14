@@ -38,7 +38,7 @@ namespace API.Controllers
         {
             bool running = false;
             
-            var todaysDate = DateTime.Today.AddHours(-3).ToString("yyyy-MM-dd");
+            var todaysDate = DateTime.Today.ToString("yyyy-MM-dd");
             Console.WriteLine(todaysDate);
             try
             {

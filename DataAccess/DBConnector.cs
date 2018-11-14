@@ -88,7 +88,7 @@ namespace API.DataAccess
 
         public bool IsNightActive(string todaysDate)
         {
-            string query = $"Select * FROM NIGHTS WHERE IsActive='1' AND Night='{todaysDate}';";
+            string query = $"Select * FROM NIGHTS WHERE Night='{todaysDate}';";
             
             if (OpenConnection())
             {
