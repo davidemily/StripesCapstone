@@ -23,21 +23,17 @@ namespace API.Controllers
         [HttpGet]
         public async Task<WaitTime> Get()
         {
-            // ex for waitTime: 105 = 1 hour 45 min
-            // need to calculate 
             WaitTime result = new WaitTime
             {
                 status = getStatus(),
                 waitTime = getWaitTime()
             };
 
-            return result;
+            return await Task.FromResult(result);
         }
 
         private string getStatus()
-        {
-            bool running = false;
-            
+        {   
             var todaysDate = DateTime.Today.ToString("yyyy-MM-dd");
             Console.WriteLine(todaysDate);
             try
@@ -49,7 +45,7 @@ namespace API.Controllers
             }
             catch (Exception ex)
             {
-                return "error";
+                return ex.ToString();
             }
             return "notRunning";
             
