@@ -70,14 +70,13 @@ namespace API.Controllers
 
             int numOfUnassignedRides = _dbConnector.GetUnassignedRides();
 
-//            numOfAssignedRides = _dbConnector.GetAssignedRides();
-//
-//            numOfRidingRides = _dbConnector.GetRidingRides();
+            int numOfAssignedRides = _dbConnector.GetAssignedRides();
+            int numOfRidingRides = _dbConnector.GetRidingRides();
 //
 //            numOfStopsPerRide = _dbConnector.GetStopsPerRide();
 //
 //            numOfCarsRunning = _dbConnector.GetNumberCarsRunning();
-            return numOfUnassignedRides;
+            return numOfUnassignedRides + numOfAssignedRides + numOfRidingRides;
         }
     }
 }

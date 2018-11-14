@@ -135,5 +135,41 @@ namespace API.DataAccess
             Console.WriteLine(result);
             return result;
         }
+
+        public int GetAssignedRides()
+        {
+            string query = "SELECT COUNT(*) FROM RIDES WHERE Status = 'assigned';";
+            int result = 0;
+            if (OpenConnection())
+            {
+                Console.WriteLine("connected to database");
+                MySqlCommand comm = connection.CreateCommand();
+                comm.CommandText = query;
+                var result1 = comm.ExecuteScalar().ToString();
+                Console.WriteLine(result1);
+                result = int.Parse(result1);
+                CloseConnection();
+            }
+            Console.WriteLine(result);
+            return result;
+        }
+
+        public int GetRidingRides()
+        {
+            string query = "SELECT COUNT(*) FROM RIDES WHERE Status = 'riding';";
+            int result = 0;
+            if (OpenConnection())
+            {
+                Console.WriteLine("connected to database");
+                MySqlCommand comm = connection.CreateCommand();
+                comm.CommandText = query;
+                var result1 = comm.ExecuteScalar().ToString();
+                Console.WriteLine(result1);
+                result = int.Parse(result1);
+                CloseConnection();
+            }
+            Console.WriteLine(result);
+            return result;
+        }
     }
 }
