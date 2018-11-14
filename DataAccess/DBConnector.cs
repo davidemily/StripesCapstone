@@ -174,12 +174,17 @@ namespace API.DataAccess
             int result = 0;
             if (OpenConnection())
             {
+                Console.WriteLine("connected to database");
                 MySqlCommand comm = connection.CreateCommand();
                 comm.CommandText = query;
-                var result1 = comm.ExecuteScalar();
+                var result1 = comm.ExecuteScalar().ToString();
                 Console.WriteLine(result1);
-                result = Convert.ToInt32(result1);
+                result = int.Parse(result1);
                 CloseConnection();
+            }
+            else
+            {
+                Console.WriteLine("bork bork bork");
             }
             Console.WriteLine(result);
             return result;
