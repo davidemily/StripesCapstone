@@ -95,12 +95,12 @@ namespace API.DataAccess
                 MySqlCommand comm = connection.CreateCommand();
                 comm.CommandText = query;
                 var response = comm.ExecuteReader();
+                CloseConnection();
                 if (response.FieldCount > 0)
                 {
-                    return true;
+                    return true;       
                 }
             }
-            CloseConnection();
             return false;
         }
 
@@ -131,10 +131,6 @@ namespace API.DataAccess
                 Console.WriteLine(result1);
                 result = int.Parse(result1);
                 CloseConnection();
-            }
-            else
-            {
-                Console.WriteLine("bork bork bork");
             }
             Console.WriteLine(result);
             return result;

@@ -39,17 +39,17 @@ namespace API.Controllers
             bool running = false;
             
             var todaysDate = DateTime.Today.ToString("yyyy-MM-dd");
-//            try
-//            {
-//                if(_dbConnector.IsNightActive(todaysDate))
-//                {
-//                    return "running";
-//                }
-//            }
-//            catch (Exception ex)
-//            {
-//                return "error";
-//            }
+            try
+            {
+                if( _dbConnector.IsNightActive(todaysDate))
+                {
+                    return "running";
+                }
+            }
+            catch (Exception ex)
+            {
+                return "error";
+            }
             return "notRunning";
             
         }
