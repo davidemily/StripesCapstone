@@ -164,5 +164,21 @@ namespace API.DataAccess
 
             return result;
         }
+
+        public int GetNumberCarsRunning()
+        {
+            string query = "SELECT COUNT(*) FROM CARS WHERE IsActive = '1';";
+            int result = 0;
+            if (OpenConnection())
+            {
+                MySqlCommand comm = connection.CreateCommand();
+                comm.CommandText = query;
+                var result1 = comm.ExecuteScalar().ToString();
+                result = int.Parse(result1);
+                CloseConnection();
+            }
+
+            return result;
+        }
     }
 }

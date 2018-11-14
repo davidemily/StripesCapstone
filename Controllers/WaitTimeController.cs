@@ -59,24 +59,21 @@ namespace API.Controllers
   //(Number assigned rides * estimated wait time of assigned ride in minutes * amount of patrons dropped off per location)] / Number of cars
         private int getWaitTime()
         {
+            int numOfUnassignedRides = 0;
+            int numOfAssignedRides = 0;
+
+            int numOfRidingRides = 0;
             
-//            int numOfAssignedRides = 0;
-//
-//            int numOfRidingRides = 0;
-//
-//            float numOfStopsPerRide = 0;
-//            
-//            int numOfCarsRunning = 0;
+            int numOfCarsRunning = 0;
 
-            int numOfUnassignedRides = _dbConnector.GetUnassignedRides();
-
-            int numOfAssignedRides = _dbConnector.GetAssignedRides();
-            int numOfRidingRides = _dbConnector.GetRidingRides();
+            numOfUnassignedRides = _dbConnector.GetUnassignedRides();
+            numOfAssignedRides = _dbConnector.GetAssignedRides();
+            numOfRidingRides = _dbConnector.GetRidingRides();
 //
 //            numOfStopsPerRide = _dbConnector.GetStopsPerRide();
-//
-//            numOfCarsRunning = _dbConnector.GetNumberCarsRunning();
-            return numOfUnassignedRides + numOfAssignedRides + numOfRidingRides;
+
+            numOfCarsRunning = _dbConnector.GetNumberCarsRunning();
+            return numOfUnassignedRides + numOfAssignedRides + numOfRidingRides + numOfCarsRunning;
         }
     }
 }
