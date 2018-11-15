@@ -182,12 +182,15 @@ namespace API.DataAccess
 
         public void InsertNewCar(CarRequest request)
         {
-            string query = $"INSERT INTO CARS (CarId, CarNumber, PhoneNumber, IsActive) VALUES ('{request.CarId}', '{request.CarNumber}', '{request.PhoneNumber}', '{request.IsActive}'";
+            //string query = $"INSERT INTO CARS (CarId, CarNumber, PhoneNumber, IsActive) VALUES ('{request.CarId}', '{request.CarNumber}', '{request.PhoneNumber}', '{request.IsActive}'";
 
             if (OpenConnection())
             {
                 MySqlCommand comm = connection.CreateCommand();
-                comm.CommandText = query;
+                comm.CommandText = 
+                    "INSERT INTO CARS (CarId, CarNumber, PhoneNumber, IsActive)" + 
+                    " VALUES " +
+                    $"({request.CarId}, '{request.CarNumber}', '{request.PhoneNumber}', '{request.IsActive}')"; 
                 if (comm.ExecuteNonQuery() != 1)
                 {
                     Console.WriteLine("Did not modify database");
