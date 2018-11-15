@@ -180,9 +180,9 @@ namespace API.DataAccess
             return result;
         }
 
-        public void InsertNewCar(int carId, int carNumber, string phoneNumber, byte isActive)
+        public void InsertNewCar(CarRequest request)
         {
-            string query = $"INSERT INTO CARS (CarId, CarNumber, PhoneNumber, IsActive) VALUES ('{carId}', '{carNumber}', '{phoneNumber}', '{isActive}'";
+            string query = $"INSERT INTO CARS (CarId, CarNumber, PhoneNumber, IsActive) VALUES ('{request.CarId}', '{request.CarNumber}', '{request.PhoneNumber}', '{request.IsActive}'";
 
             if (OpenConnection())
             {
