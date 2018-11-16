@@ -89,19 +89,19 @@ namespace API.DataAccess
         public bool IsNightActive(string todaysDate)
         {
             string query = $"Select * FROM NIGHTS WHERE Night='{todaysDate}';";
-            
+            var result = false;
             if (OpenConnection())
             {
                 MySqlCommand comm = connection.CreateCommand();
                 comm.CommandText = query;
-                var response = comm.ExecuteReader();
-                if (response.FieldCount > 0)
+                var queryResult = comm.ExecuteScalar();
+                if(queryResult != null)
                 {
-                    CloseConnection();
-                    return true;       
+                    result = true;
                 }
+                CloseConnection();
             }
-            return false;
+            return result;
         }
 
         public void CreateNewNight(string todaysDate)
@@ -142,7 +142,6 @@ namespace API.DataAccess
                 MySqlCommand comm = connection.CreateCommand();
                 comm.CommandText = query;
                 var result1 = comm.ExecuteScalar().ToString();
-                Console.WriteLine(result1);
                 result = int.Parse(result1);
                 CloseConnection();
             }
