@@ -176,8 +176,28 @@ namespace API.DataAccess
                 result = int.Parse(result1);
                 CloseConnection();
             }
-
             return result;
+        }
+
+        public void InsertNewCar(CarRequest request)
+        {
+            //string query = $"INSERT INTO CARS (CarId, CarNumber, PhoneNumber, IsActive) VALUES ('{request.CarId}', '{request.CarNumber}', '{request.PhoneNumber}', '{request.IsActive}'";
+
+            if (OpenConnection())
+            {
+                MySqlCommand comm = connection.CreateCommand();
+                comm.CommandText = 
+                    "INSERT INTO CARS (CarId, CarNumber, PhoneNumber, IsActive)" + 
+                    " VALUES " +
+                    $"({request.CarId}, '{request.CarNumber}', '{request.PhoneNumber}', '{request.IsActive}')"; 
+                if (comm.ExecuteNonQuery() != 1)
+                {
+                    Console.WriteLine("Did not modify database");
+                    throw new Exception("did not modify database");
+                }
+                CloseConnection();
+            }
+            return;
         }
     }
 }
