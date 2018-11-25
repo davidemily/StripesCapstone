@@ -106,7 +106,7 @@ namespace API.DataAccess
 
         public void CreateNewNight(string todaysDate)
         {
-            string query = $"INSERT INTO NIGHTS (Night, IsActive) VALUES ('{todaysDate}', 1);";
+            string query = $"INSERT INTO NIGHTS (NightId, Night, IsActive) VALUES (1, '{todaysDate}', 1);";
 
             if (OpenConnection())
             {
