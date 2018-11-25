@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using API.Models;
 using API.DataAccess;
+using API.ServiceLayer;
 
 using System.Collections.Generic;
 using System;
@@ -17,31 +18,34 @@ namespace API.Controllers
         [HttpPost]
         public ActionResult Post([FromBody] PhoneRideRequest request)
         {
-            if (request.dropoffs == null || request.passengers == null || request.firstName == null ||
-                request.homeAddress == null || request.pickupLocation == null || request.cellPhoneNumber == null)
-            {
-                return BadRequest();
-            }
+            RidesService ridesService = new RidesService();
+            return ridesService.Post(request);
+            // if (request.dropoffs == null || request.passengers == null || request.firstName == null ||
+            //     request.homeAddress == null || request.pickupLocation == null || request.cellPhoneNumber == null)
+            // {
+            //     return BadRequest();
+            // }
 
-            var convertedRideRequest = new RideRequest()
-            {
-                Pickup = request.pickupLocation,
-                PhoneNumber = request.cellPhoneNumber,
-                NumberOfPeople = request.passengers,
-                Destination = request.homeAddress,
-                PatronName = request.firstName
-            };   
+            // var convertedRideRequest = new RideRequest()
+            // {
+            //     Pickup = request.pickupLocation,
+            //     PhoneNumber = request.cellPhoneNumber,
+            //     NumberOfPeople = request.passengers,
+            //     Destination = request.homeAddress,
+            //     PatronName = request.firstName
+            // };   
             
-            try
-            {
-                DBConnector db = new DBConnector();
-                db.InsertRide(convertedRideRequest);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500);
-            }
-            return Ok();
+            // try
+            // {
+            //     DBConnector db = new DBConnector();
+            //     db.InsertRide(convertedRideRequest);
+            // }
+            // catch (Exception ex)
+            // {
+            //     Console.WriteLine(ex);
+            //     return StatusCode(500);
+            // }
+            // return Ok();
 
         }
     }
