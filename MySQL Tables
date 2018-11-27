@@ -1,0 +1,75 @@
+CREATE TABLE `AUTHENTICATION` (
+  `AuthenticationId` int(11) NOT NULL auto_increment,
+  `Username` varchar(60) NOT NULL,
+  `Password` varchar(60) NOT NULL,
+  `IsActive` tinyint(1) NOT NULL default '1',
+  `Status` enum('member','executive') NOT NULL default 'member',
+  PRIMARY KEY  (`AuthenticationId`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1
+CREATE TABLE `CARS` (
+  `CarId` int(11) NOT NULL auto_increment,
+  `CarNumber` int(11) NOT NULL,
+  `PhoneNumber` char(11) default NULL,
+  `IsActive` tinyint(1) NOT NULL default '1',
+  PRIMARY KEY  (`CarId`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1
+CREATE TABLE `LOCATIONS` (
+  `LocationId` int(11) NOT NULL auto_increment,
+  `LocationName` text NOT NULL,
+  `Address` text NOT NULL,
+  `Latitude` text NOT NULL,
+  `Longitude` text NOT NULL,
+  `IsPickup` tinyint(1) NOT NULL default '0',
+  `IsDropoff` tinyint(1) NOT NULL default '0',
+  `IsApartment` tinyint(1) NOT NULL default '0',
+  `IsActive` tinyint(1) NOT NULL default '1',
+  PRIMARY KEY  (`LocationId`)
+) ENGINE=InnoDB AUTO_INCREMENT=439 DEFAULT CHARSET=latin1
+CREATE TABLE `LOG` (
+  `LogId` int(11) NOT NULL auto_increment,
+  `Date` datetime NOT NULL,
+  `Level` varchar(50) NOT NULL,
+  `Logger` varchar(50) NOT NULL,
+  `Message` text NOT NULL,
+  `Exception` text,
+  PRIMARY KEY  (`LogId`)
+) ENGINE=MyISAM AUTO_INCREMENT=104138 DEFAULT CHARSET=latin1
+CREATE TABLE `NIGHTS` (
+  `NightId` int(11) NOT NULL auto_increment,
+  `Night` date NOT NULL,
+  `IsActive` tinyint(1) NOT NULL default '1',
+  PRIMARY KEY  (`NightId`)
+) ENGINE=InnoDB AUTO_INCREMENT=689 DEFAULT CHARSET=latin1
+CREATE TABLE `RIDES` (
+  `RideId` int(11) NOT NULL auto_increment,
+  `PatronName` varchar(80) NOT NULL,
+  `PhoneNumber` char(20) NOT NULL,
+  `NumberOfPeople` varchar(2) NOT NULL default '1',
+  `Pickup` text NOT NULL,
+  `PickupLat` text,
+  `PickupLong` text,
+  `Destination` text NOT NULL,
+  `DestinationLat` text,
+  `DestinationLong` text,
+  `Description` text,
+  `Status` enum('waiting','assigned','canceled','completed','riding') NOT NULL default 'waiting',
+  `TimeRequested` datetime NOT NULL,
+  `TimeDispatched` datetime default NULL,
+  `TimeFinished` datetime default NULL,
+  `TimePickedUp` datetime default NULL,
+  `RequestSource` enum('iphone','android','caller') NOT NULL default 'caller',
+  `NIGHTS_NightId` int(11) NOT NULL,
+  `CARS_CarId` int(11) default NULL,
+  PRIMARY KEY  (`RideId`),
+  KEY `fk_RIDES_NIGHTS` (`NIGHTS_NightId`),
+  KEY `fk_RIDES_CARS1` (`CARS_CarId`),
+  CONSTRAINT `fk_RIDES_CARS1` FOREIGN KEY (`CARS_CarId`) REFERENCES `CARS` (`CarId`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_RIDES_NIGHTS` FOREIGN KEY (`NIGHTS_NightId`) REFERENCES `NIGHTS` (`NightId`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=70497 DEFAULT CHARSET=latin1
+CREATE TABLE `SETTINGS` (
+  `SettingsId` int(11) NOT NULL auto_increment,
+  `StartTime` datetime NOT NULL,
+  `EndTime` datetime NOT NULL,
+  `PageRefresh` datetime NOT NULL,
+  PRIMARY KEY  (`SettingsId`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1
